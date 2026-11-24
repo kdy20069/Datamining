@@ -1,0 +1,8 @@
+ChemicalName,CID,GeneSymbol,GeneID,AID,AssayRole,Endpoint,Outcome,Value_uM,AssaySpecies,PubChem_CID_URL,PubChem_AID_URL,Source_Locator_Audit_Date
+Prallethrin,9839306,CYP2C19,1557,1671197,Reporter antagonist,Potency,Active,4.9922,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/1671197,2026-11-23
+Prallethrin,9839306,CYP2C19,1557,2284395,Reporter antagonist,AC50,Active,5.28977,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/2284395,2026-11-23
+Prallethrin,9839306,CYP3A4,1576,1671201,Reporter antagonist,Potency,Active,8.8776,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/1671201,2026-11-23
+Prallethrin,9839306,CYP3A4,1576,2283680,Gene expression (6 h),AC50,Active,2.84101,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/2283680,2026-11-23
+Prallethrin,9839306,CYP3A4,1576,2283689,Gene expression (24 h),AC50,Active,4.63614,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/2283689,2026-11-23
+Prallethrin,9839306,CYP3A4,1576,2283698,Gene expression (48 h),AC50,Active,14.0582,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/2283698,2026-11-23
+Prallethrin,9839306,CYP3A4,1576,2284096,Reporter antagonist,AC50,Active,7.59824,Unknown,https://pubchem.ncbi.nlm.nih.gov/compound/9839306,https://pubchem.ncbi.nlm.nih.gov/bioassay/2284096,2026-11-23

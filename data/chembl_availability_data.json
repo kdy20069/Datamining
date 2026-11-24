@@ -1,0 +1,632 @@
+[
+  {
+    "role": "Active Ingredients",
+    "chemical": "Bifenthrin",
+    "cas": [
+      "82657-04-3"
+    ],
+    "chembl_id": "CHEMBL2227975",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2227975"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Cyphenothrin",
+    "cas": [
+      "39515-40-7"
+    ],
+    "chembl_id": "CHEMBL3182113",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "39515-40-7"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3182113"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "d-Phenothrin",
+    "cas": [
+      "26002-80-2"
+    ],
+    "chembl_id": "CHEMBL1322884; CHEMBL2131556",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "26002-80-2"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1322884",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2131556"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Deltamethrin",
+    "cas": [
+      "52918-63-5"
+    ],
+    "chembl_id": "CHEMBL1593566",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1593566"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Etofenprox",
+    "cas": [
+      "80844-07-1"
+    ],
+    "chembl_id": "CHEMBL2105573",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2105573"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Imiprothrin",
+    "cas": [
+      "72963-72-5"
+    ],
+    "chembl_id": "CHEMBL1437391",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "72963-72-5"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1437391"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Lambda-cyhalothrin",
+    "cas": [
+      "91465-08-6"
+    ],
+    "chembl_id": "CHEMBL1905223; CHEMBL2105498; CHEMBL2251732; CHEMBL2270530; CHEMBL3183713",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "91465-08-6"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1905223",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2105498",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2251732",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2270530",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3183713"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Methofluthrin",
+    "cas": [
+      "240494-70-6"
+    ],
+    "chembl_id": "CHEMBL3561952",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "240494-70-6"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3561952"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Metofluthrin",
+    "cas": [
+      "240494-70-6"
+    ],
+    "chembl_id": "CHEMBL3561952",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "240494-70-6"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3561952"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Permethrin",
+    "cas": [
+      "52645-53-1"
+    ],
+    "chembl_id": "CHEMBL1525",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1525"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Prallethrin",
+    "cas": [
+      "23031-36-9"
+    ],
+    "chembl_id": "CHEMBL1876311",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "23031-36-9"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1876311"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Pyrethrins",
+    "cas": [
+      "8003-34-7"
+    ],
+    "chembl_id": "CHEMBL2108766",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2108766"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Transfluthrin",
+    "cas": [
+      "118712-89-3"
+    ],
+    "chembl_id": "CHEMBL1978506; CHEMBL3184657; CHEMBL3560342",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "118712-89-3"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1978506",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3184657",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3560342"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "Zeta-Cypermethrin",
+    "cas": [
+      "52315-07-8"
+    ],
+    "chembl_id": "CHEMBL2272088; CHEMBL3185484; CHEMBL373204",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "52315-07-8"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2272088",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3185484",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL373204"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Active Ingredients",
+    "chemical": "α-Cypermethrin",
+    "cas": [
+      "67375-30-8"
+    ],
+    "chembl_id": "CHEMBL2272088; CHEMBL3185484; CHEMBL373204",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "67375-30-8"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2272088",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3185484",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL373204"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Imiprothrin",
+    "cas": [
+      "72963-72-5"
+    ],
+    "chembl_id": "CHEMBL1437391",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "72963-72-5"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1437391"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Prallethrin",
+    "cas": [
+      "23031-36-9"
+    ],
+    "chembl_id": "CHEMBL1876311",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "23031-36-9"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1876311"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Piperonyl butoxide (PBO)",
+    "cas": [
+      "51-03-6"
+    ],
+    "chembl_id": "CHEMBL1201131",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "51-03-6"
+    ],
+    "AChE": 0,
+    "CYP3A4": 4,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1201131"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Cyphenothrin",
+    "cas": [
+      "39515-40-7"
+    ],
+    "chembl_id": "CHEMBL3182113",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "39515-40-7"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3182113"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Zeta-Cypermethrin",
+    "cas": [
+      "52315-07-8"
+    ],
+    "chembl_id": "CHEMBL2272088; CHEMBL3185484; CHEMBL373204",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "52315-07-8"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2272088",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3185484",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL373204"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Zeta cypermethrin",
+    "cas": [
+      "52315-07-8"
+    ],
+    "chembl_id": "CHEMBL2272088; CHEMBL3185484; CHEMBL373204",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "52315-07-8"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2272088",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL3185484",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL373204"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "PBO",
+    "cas": [
+      "18693"
+    ],
+    "chembl_id": "CHEMBL1201131",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "51-03-6"
+    ],
+    "AChE": 0,
+    "CYP3A4": 4,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1201131"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "d-Phenothrin",
+    "cas": [
+      "26002-80-2"
+    ],
+    "chembl_id": "CHEMBL1322884; CHEMBL2131556",
+    "match_method": "connectivity-only SMILES",
+    "structure_cas_source": [
+      "26002-80-2"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1322884",
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2131556"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "Permethrin",
+    "cas": [
+      "52645-53-1"
+    ],
+    "chembl_id": "CHEMBL1525",
+    "match_method": "exact name",
+    "structure_cas_source": [],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1525"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records."
+  },
+  {
+    "role": "Additives",
+    "chemical": "페퍼민트오일",
+    "cas": [
+      "8006-90-4"
+    ],
+    "chembl_id": "CHEMBL2108758",
+    "match_method": "CAS 8006-90-4 cross-reference to ChEMBL via PubChem; mixture identity",
+    "structure_cas_source": [
+      "PubChem CID 6850741 cross-reference"
+    ],
+    "AChE": 0,
+    "CYP3A4": 0,
+    "source_database": "ChEMBL",
+    "source_record_urls": [
+      "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL2108758"
+    ],
+    "source_locator_audit_date": "2026-11-23",
+    "activity_query_target_ids": {
+      "AChE": "CHEMBL220",
+      "CYP3A4": "CHEMBL340"
+    },
+    "activity_query_date": "not preserved in source artifact",
+    "value_semantics": "Counts in the archived target-filtered ChEMBL activity query; not active/inactive classifications. A zero is limited to the queried ChEMBL records.",
+    "count_basis": "No matching target-keyword activity rows in archived ChEMBL molecule activity query; see chembl_peppermint_oil_activity_snapshot.json"
+  }
+]

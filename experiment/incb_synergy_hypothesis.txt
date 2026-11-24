@@ -1,0 +1,24 @@
+Final Project: Mixture Synergy Hypothesis & Database Evidence
+=============================================================
+1. Chemical 1 (Active/Additive): Permethrin / Piperonyl Butoxide (PBO) / Prallethrin
+   - Source: Insecticide Workbook / CTD / PubChem BioAssay
+   - Target: CYP3A4, CYP2C19 (Metabolism / Inhibition)
+
+2. Chemical 2 (INCB Psychotropic): Alprazolam (or Diazepam)
+   - Source: INCB Green List (Schedule IV)
+   - Alprazolam CAS: 28981-97-7 (PubChem CID: 2118)
+   - Diazepam CAS: 439-14-5 (PubChem CID: 3016)
+
+3. Synergy Mechanism (The "Why"):
+   - Both Alprazolam and Diazepam are extensively metabolized by CYP3A4.
+   - If exposure to insecticides (Permethrin/PBO) inhibits CYP3A4 activity, the clearance of the psychotropic drug is severely delayed.
+   - This leads to toxic accumulation of the psychotropic drug in the nervous system, resulting in amplified neurotoxicity.
+
+4. Link to Psychiatric Disease (GSE208338 - MDD) & LINCS:
+   - Patients with Major Depressive Disorder (MDD, GSE208338) frequently use benzodiazepines like Alprazolam.
+   - Altered baseline gene expression in MDD patients, combined with neuro-metabolic stress (e.g., altered cholesterol biosynthesis observed in Haloperidol LINCS signature LINCSCP_22231), makes this population uniquely vulnerable to this specific CYP3A4-mediated mixture toxicity.
+
+5. Pathway & Reaction Evidence (KEGG, Reactome, STRING) - Inference Limits:
+   - STRING: CYP3A4 and POR have a functional association (0.979) but the physical subnetwork score is 0.597. Functional link does NOT prove physical binding.
+   - KEGG: CYP3A4 (hsa:1576) is in 10 pathways (e.g., hsa00980). Prallethrin (C18510) and PBO (C18880) are in KEGG, but have NO pathway link. Limit: "No pathway link" does not mean "not metabolized".
+   - Reactome: CYP3A4 is a catalyst in curated reactions (e.g., R-HSA-211948). Prallethrin/PBO yield "no entry". Limit: "No Reactome entry" does not mean "not metabolized".

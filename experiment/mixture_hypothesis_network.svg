@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+  <marker id="arrowRed" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c2413b"/></marker>
+  <style>
+    text{font-family:Arial,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#172033}
+    .title{font-size:38px;font-weight:700;letter-spacing:1px}.sub{font-size:19px;fill:#536174}
+    .node{rx:18;ry:18;stroke-width:2.5}.head{font-size:24px;font-weight:700}.body{font-size:18px;fill:#435166}
+    .small{font-size:16px;fill:#5b6778}.edge{fill:none;stroke:#334155;stroke-width:4;marker-end:url(#arrow)}
+    .hyp{fill:none;stroke:#c2413b;stroke-width:4;stroke-dasharray:12 10;marker-end:url(#arrowRed)}
+    .pill{font-size:15px;font-weight:700;letter-spacing:.5px}
+  </style>
+</defs>
+<rect width="1600" height="1000" fill="#fbfcfe"/>
+<text x="80" y="78" class="title">MIXTURE HYPOTHESIS</text>
+<text x="80" y="116" class="sub">Deltamethrin + piperonyl butoxide (PBO): what is established, and what remains to test?</text>
+<line x1="80" y1="145" x2="1520" y2="145" stroke="#d8dee8" stroke-width="2"/>
+
+<!-- Nodes -->
+<rect x="95" y="220" width="300" height="130" class="node" fill="#eaf2ff" stroke="#4981d1"/>
+<text x="125" y="265" class="head">주성분</text><text x="125" y="300" class="body">Deltamethrin</text><text x="125" y="328" class="small">pyrethroid insecticide</text>
+
+<rect x="95" y="570" width="300" height="130" class="node" fill="#fff3e7" stroke="#d88a32"/>
+<text x="125" y="615" class="head">첨가물 / synergist</text><text x="125" y="650" class="body">Piperonyl butoxide (PBO)</text><text x="125" y="678" class="small">ChEMBL: CHEMBL1201131</text>
+
+<rect x="535" y="220" width="340" height="130" class="node" fill="#eef5ff" stroke="#4981d1"/>
+<text x="565" y="265" class="head">VGSC 결합·기능 변화</text><text x="565" y="300" class="body">전압개폐성 나트륨 채널</text><text x="565" y="328" class="small">신경막 전기 신호의 지속·교란</text>
+
+<rect x="535" y="570" width="340" height="130" class="node" fill="#fff6ec" stroke="#d88a32"/>
+<text x="565" y="615" class="head">대사 효소 억제?</text><text x="565" y="650" class="body">곤충 CYP450 / 기타 해독효소</text><text x="565" y="678" class="small">종·효소별 억제 정도를 확인해야 함</text>
+
+<rect x="1050" y="220" width="400" height="130" class="node" fill="#edf8f1" stroke="#41966a"/>
+<text x="1080" y="265" class="head">신경 이상·행동 변화</text><text x="1080" y="300" class="body">과흥분 → knockdown / 마비</text><text x="1080" y="328" class="small">행동·생존 결과는 생물검정으로 측정</text>
+
+<rect x="1050" y="570" width="400" height="130" class="node" fill="#f4efff" stroke="#8664be"/>
+<text x="1080" y="615" class="head">주성분 대사·잔존량</text><text x="1080" y="650" class="body">분해·해독 감소 가능성</text><text x="1080" y="678" class="small">곤충 체내 deltamethrin 농도/대사물</text>
+
+<!-- Established evidence paths -->
+<path d="M395 285 L525 285" class="edge"/>
+<path d="M875 285 L1040 285" class="edge"/>
+<path d="M395 635 L525 635" class="hyp"/>
+<path d="M875 635 L1040 635" class="hyp"/>
+<text x="420" y="255" class="pill" fill="#334155">문헌 근거</text>
+<text x="900" y="255" class="pill" fill="#334155">기전 근거</text>
+<text x="410" y="605" class="pill" fill="#a3342e">종 특이적 가설</text>
+<text x="900" y="605" class="pill" fill="#a3342e">이 종에서 검증</text>
+
+<!-- Hypothesized links -->
+<path d="M720 360 C720 430 740 480 760 560" class="hyp"/>
+<rect x="740" y="418" width="332" height="70" rx="12" fill="#fff" stroke="#e7a5a0"/>
+<text x="758" y="446" class="pill" fill="#a3342e">핵심 가설: 경로 간 상호작용</text>
+<text x="758" y="472" class="small">PBO가 이 곤충에서 대사를 낮추는가?</text>
+
+<path d="M1235 570 C1235 485 1220 435 1220 360" class="hyp"/>
+<rect x="1270" y="414" width="250" height="74" rx="12" fill="#fff" stroke="#e7a5a0"/>
+<text x="1288" y="443" class="pill" fill="#a3342e">추가 가설</text>
+<text x="1288" y="470" class="small">대사 억제 → VGSC 노출↑?</text>
+
+<!-- Convergence hypothesis -->
+<path d="M395 305 C680 390 910 390 1040 310" class="hyp"/>
+<path d="M395 650 C660 780 920 780 1050 660" class="hyp"/>
+<text x="395" y="415" class="pill" fill="#a3342e">혼합물에서 효과가 더 커질까?</text>
+<text x="395" y="443" class="small">단독 효과의 합을 넘는지 직접 비교</text>
+
+<!-- Legend -->
+<line x1="92" y1="800" x2="190" y2="800" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="210" y="806" class="body">실선: 문헌/데이터베이스가 뒷받침하는 기전 (모델 종·조건 확인 필요)</text>
+<line x1="92" y1="850" x2="190" y2="850" stroke="#c2413b" stroke-width="4" stroke-dasharray="12 10" marker-end="url(#arrowRed)"/>
+<text x="210" y="856" class="body">점선: 이 조합·종·용량에서 아직 입증되지 않은 가설</text>
+
+<rect x="90" y="895" width="1420" height="62" rx="14" fill="#fff8e8" stroke="#e6c66a" stroke-width="2"/>
+<text x="115" y="922" class="pill" fill="#775b13">DATABASE GAP</text>
+<text x="275" y="922" class="small">기존 heatmap: deltamethrin은 AChE/CYP3A4 표적 기록 0건, PBO는 CYP3A4 관련 기록 4건. 이는 해당 선택 표적의 기록 수이며, 곤충 CYP 억제나 혼합 시너지의 증거가 아님.</text>
+<text x="115" y="945" class="small">핵심 연구 질문: PBO가 특정 해충의 CYP 활성을 낮춰 deltamethrin 대사·체내 잔존량과 신경행동 독성을 용량 의존적으로 바꾸며, 그 효과가 단독 처리 기대값을 넘는가?</text>
+</svg>

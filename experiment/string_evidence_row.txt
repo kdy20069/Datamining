@@ -1,0 +1,22 @@
+[STRING Evidence Row]
+1. Query
+   - Proteins: CYP3A4, POR
+   - Organism: Homo sapiens (Taxon 9606)
+   - STRING IDs: 9606.ENSP00000498939 (CYP3A4), 9606.ENSP00000419970 (POR)
+
+2. Settings
+   - Network type: Full STRING network
+   - Minimum required score: High confidence (0.700)
+   - Max interactors (1st shell): None (Query proteins only)
+   - Database Version: STRING v12.5
+
+3. Result Scores
+   - Channels: Gene fusion 0.899, Text mining 0.649, Experiments 0.456, Co-expression 0.075
+   - Combined Score (Full network): 0.979
+   - Physical Subnetwork Score: 0.597 (Absent at 0.700 cut-off)
+
+[Inference Limits (DO NOT CLAIM)]
+1. Score 0.979 does NOT mean "97.9% chance they bind". It indicates a high probability of a functional association, not necessarily a physical binding probability.
+2. A functional edge (0.979) does NOT prove that "CYP3A4 physically binds POR". (The physical subnetwork score was only 0.597, below the high confidence threshold).
+3. The existence of this protein edge does NOT directly prove the effect of "prallethrin or PBO" on this specific interaction.
+4. The fact that POR is in the network does NOT automatically make POR a candidate target for neurotoxicity.

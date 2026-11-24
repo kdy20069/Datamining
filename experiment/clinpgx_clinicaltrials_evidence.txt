@@ -1,0 +1,20 @@
+[ClinPGx Evidence Row]
+1. Gene & Variant: CYP3A4 (PA130), Variant rs35599367 (CYP3A4*22).
+2. Variant Annotations: Shows Metabolism/PK evidence for various drugs (e.g., quetiapine, tacrolimus).
+3. Chemicals (Ingredients): 
+   - Prallethrin: "No results matched your query".
+   - Piperonyl butoxide (PBO): Literature hits only (no curated PGx annotations).
+4. Decision & Inference Limit: Logged coverage gap. 
+   - LIMIT 1: Absence of a PGx annotation does NOT mean absence of risk. 
+   - LIMIT 2: Metabolism/PK evidence is NOT automatically neurotoxicity evidence.
+   - LIMIT 3: Population frequency is neither effect size nor an individual's genotype.
+
+[ClinicalTrials.gov Evidence Row]
+1. Search (Intervention): "piperonyl butoxide" yielded 12 studies. Prallethrin yielded 1 text-only match.
+2. Record (Worked Example): NCT02288637 (Completed). Sponsor: London School of Hygiene and Tropical Medicine.
+3. Design & Eligibility: Randomized 2x2 factorial assignment (Conventional LLIN vs PBO net). Eligibility: Households with children 6 months to 14 years old.
+4. Outcomes & Results: Primary outcome is Malaria infection prevalence. Results status: "No Results Posted" (hasResults: false).
+5. Decision & Inference Limit: Logged gap for neurotoxicity trials.
+   - LIMIT 1: Malaria endpoints do NOT provide "neurotoxicity data".
+   - LIMIT 2: "Completed" status does NOT mean "the trial found an effect" (no results posted).
+   - LIMIT 3: 12 PBO studies do NOT mean 12 human neurotoxicity exposure studies.

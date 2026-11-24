@@ -1,0 +1,3 @@
+ChemicalName,ChemicalID,GeneSymbol,GeneID,Action,Species,PMID,CTD_Chemical_URL,CTD_Gene_URL,PubMed_URL,Source_Locator_Audit_Date
+Permethrin,D026023,CYP2C19,1557,CYP2C19 increases permethrin metabolism,Homo sapiens,24548679,https://ctdbase.org/detail.go?type=chem&acc=D026023,https://ctdbase.org/detail.go?type=gene&acc=1557,https://pubmed.ncbi.nlm.nih.gov/24548679/,2026-11-23
+Permethrin,D026023,CYP3A4,1576,CYP3A4 increases permethrin metabolism,Homo sapiens,24548679,https://ctdbase.org/detail.go?type=chem&acc=D026023,https://ctdbase.org/detail.go?type=gene&acc=1576,https://pubmed.ncbi.nlm.nih.gov/24548679/,2026-11-23

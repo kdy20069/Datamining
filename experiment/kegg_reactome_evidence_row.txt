@@ -1,0 +1,15 @@
+[KEGG Evidence Row]
+1. Gene: hsa:1576 (CYP3A4, Homo sapiens)
+2. Pathways: 10 maps total. Selected hsa00980 (Metabolism of xenobiotics by cytochrome P450) because it is the closest map to our insecticide ingredients (foreign, non-drug chemicals).
+3. Map: CYP3A4 is drawn in red. Chemicals at its steps include Benzo[a]pyrene, naphthalene, and NNK (tobacco nitrosamine).
+4. Chemicals (Ingredients): 
+   - Prallethrin (C18510): Present in KEGG COMPOUND, but no Pathway field.
+   - Piperonyl butoxide (C18880): Present in KEGG COMPOUND, but no Pathway field.
+5. Decision & Inference Limit: Kept ingredients. Logged coverage gap. LIMIT: "No pathway link" in KEGG does NOT mean "not metabolized".
+
+[Reactome Evidence Row]
+1. Search: CYP3A4. Selected reviewed reaction R-HSA-211948 (CYP3A4 can N-demethylate loperamide, 5/5 reviewed).
+2. Roles: Input = loperamide (LPAM) + O2 + NADPH + H+; Output = N-demethylated loperamide (DLOP) + NADP+ + H2O; Catalyst = CYP3A4 (member of CandidateSet R-HSA-3229233).
+3. Hierarchy: Metabolism > Biological oxidations > Phase I - Functionalization of compounds > Cytochrome P450 - arranged by substrate type > Xenobiotics.
+4. Ingredients: Prallethrin and PBO search yielded "no entry" (content service).
+5. Decision & Inference Limit: Logged missing reaction. LIMIT: "No Reactome entry" does NOT mean "not metabolized". It just means no curated reaction exists for our specific ingredients yet.

@@ -1,0 +1,13 @@
+{
+  "query": "Peppermint oil",
+  "molecule_chembl_id": "CHEMBL2108758",
+  "candidate_pref_name": "PEPPERMINT OIL",
+  "activities": [],
+  "source_database": "ChEMBL",
+  "source_search_api": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Peppermint%20oil",
+  "activity_api_pattern": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL2108758&limit=1000",
+  "filter": "archived script retained rows when target name included acetylcholinesterase/cytochrome P450/CYP or assay description included CYP",
+  "archive_artifact_mtime": "2026-09-09T12:37:40+09:00",
+  "source_artifact": "/Users/kdy20069/chembl_work/chembl_results.json",
+  "interpretation": "No matching records in this archived query result; not evidence of no biological risk."
+}

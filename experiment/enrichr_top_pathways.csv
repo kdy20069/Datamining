@@ -1,0 +1,5 @@
+Library,Top_Term,Hits,Adj_p_value,Stable_Term_ID,Term_Record_URL,Term_ID_Checked_On
+Reactome 2024,Cholesterol Biosynthesis,4/9,7.9e-9,R-HSA-191273,https://reactome.org/content/detail/R-HSA-191273,2026-11-23
+Reactome 2024,Activation of Gene Expression by SREBP,4/9,2.6e-8,R-HSA-2426168,https://reactome.org/content/detail/R-HSA-2426168,2026-11-23
+WikiPathways 2024,Mevalonate Arm of Cholesterol Biosynthesis,4/9,5.1e-10,WP4190,https://www.wikipathways.org/pathways/WP4190.html,2026-11-23
+GO BP 2025,Cholesterol Biosynthetic Process,3/9,4.5e-6,GO:0006695,https://amigo.geneontology.org/amigo/term/GO:0006695,2026-11-23

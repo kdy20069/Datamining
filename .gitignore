@@ -1,0 +1,6 @@
+.DS_Store
+
+experiment/lihc_tcga_pan_can_atlas_2018/data_methylation_hm450.txt
+experiment/lihc_tcga_pan_can_atlas_2018/data_methylation_hm27_hm450_merged.txt
+*.tar
+*.tar.gz

@@ -1,0 +1,77 @@
+PATIENT_ID	START_DATE	STOP_DATE	EVENT_TYPE	TREATMENT_TYPE	TREATMENT_SUBTYPE	AGENT	NUMBER_OF_CYCLES	PRESCRIBED_DOSE	PRESCRIBED_DOSE_UNITS	REGIMEN_NUMBER	REGIMEN_INDICATION	REGIMEN_INDICATION_NOTES	MEASURE_OF_RESPONSE	CLINICAL_TRIAL_DRUG_CLASSIFICATION	ROUTE_OF_ADMINISTRATION	ROUTE_OF_ADMINISTRATION-2	THERAPY_ONGOING	TOTAL_DOSE	TOTAL_DOSE_UNITS	TX_ON_CLINICAL_TRIAL	ANATOMIC_TREATMENT_SITE	COURSE_NUMBER	NUMBER_OF_FRACTIONS	RADIATION_DOSAGE	RADIATION_TREATMENT_ONGOING	RADIATION_TYPE	RADIATION_UNITS	PHARM_REGIMEN	STEM_CELL_TRANSPLANTATION	STEM_CELL_TRANSPLANTATION_TYPE
+TCGA-2Y-A9GV	2233	2304	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-2Y-A9GZ	719	842	Treatment	Chemotherapy		Sorafenib											No			No										
+TCGA-2Y-A9H8	398	491	Treatment	Chemotherapy		Sorafenib											No			No										
+TCGA-2Y-A9H8	498	608	Treatment	Chemotherapy		Everolimus							stable disease				No			Yes										
+TCGA-2Y-A9H8	498	608	Treatment	Hormone Therapy		Pasireotide							stable disease				No			Yes										
+TCGA-2Y-A9H9	1017		Treatment	Chemotherapy		Sorafenib											Yes			No										
+TCGA-3K-AAZ8	212	304	Treatment	Not Specified		Sorafenib							clinical progressive disease				No			No										
+TCGA-3K-AAZ8	304		Treatment	Not Specified		Regorafenib											Yes			No										
+TCGA-5R-AA1D	33	40	Treatment	Radiation Therapy		Radiation 1							complete response								Regional Site		3	60	No	External	gy			
+TCGA-BC-4073	81		Treatment	Chemotherapy		Sorafenib		400	mg	1	Progression				PO		Yes	800	mg/day											
+TCGA-BC-4073	166		Treatment	Chemotherapy		Sorafenib		200	mg	2	Other, Specify In Notes				PO		Yes	400	mg/day											
+TCGA-BC-A10Q	217	217	Treatment	Other	Chemoembolization	Doxorubicin	1	20	mg	1	Adjuvant				IH		No	20	mg											
+TCGA-BC-A10Q	217	217	Treatment	Other	Chemoembolization	Mitomycin	1	5	mg	1	Adjuvant				IH		No	5	mg											
+TCGA-BC-A10Q	359	408	Treatment	Hormone Therapy		Tamoxifen				1	Progression						No													
+TCGA-BC-A10Q	426	751	Treatment	Chemotherapy		Gemcitabine				2	Progression						No													
+TCGA-BC-A10R	237	237	Treatment	Other	Chemoembolization		1			1	Progression				IH		No													
+TCGA-BC-A10W	82	85	Treatment	Chemotherapy			1			1	Adjuvant						No													
+TCGA-BC-A8YO	54	186	Treatment	Chemotherapy		Sorafenib							partial response				No			No										
+TCGA-BW-A5NP	128	289	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-CC-A8HV	158	188	Treatment	Targeted Molecular Therapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A115	502	841	Treatment	Chemotherapy									stable disease	phase ii			No			Yes										
+TCGA-DD-A116	755	755	Treatment	Radiation Therapy		Radiation 1							radiographic progressive disease								Regional Site		1	5500	No	Systemic	cgy			
+TCGA-DD-A11D	586	641	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A11D	709	1105	Treatment	Chemotherapy		Veliparib + Temozolomide							partial response				No			Yes										
+TCGA-DD-A11D	1408	1474	Treatment	Chemotherapy		Temozolomide							stable disease				No			No										
+TCGA-DD-A1EC	330		Treatment	Chemotherapy										phase iii			Yes			Yes										
+TCGA-DD-A1EG	1154	1310	Treatment	Chemotherapy		Sorafenib											No			No										
+TCGA-DD-A1EH	358	863	Treatment	Chemotherapy		Sorafenib							partial response				No			No										
+TCGA-DD-A1EH	553	721	Treatment	Chemotherapy		Doxorubicin							partial response				No			No										
+TCGA-DD-A1EH	862	975	Treatment	Chemotherapy		Everolimus + Gemcitabine + Cisplatin							clinical progressive disease				No			Yes										
+TCGA-DD-A1EJ	264	887	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A1EK	188	349	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A39V	430	444	Treatment	Radiation Therapy		Radiation 1							radiographic progressive disease								Distant Recurrence				No					
+TCGA-DD-A3A4	459	486	Treatment	Chemotherapy		Gemcitabine							clinical progressive disease				No			No										
+TCGA-DD-A3A7	146	192	Treatment	Chemotherapy									clinical progressive disease	phase ii			No			Yes										
+TCGA-DD-A4ND	20	218	Treatment	Chemotherapy		Doxorubicin + Cyclophosphamide							complete response				No			No										
+TCGA-DD-A4NE	225		Treatment	Chemotherapy		Sorafenib											Yes			No										
+TCGA-DD-A4NF	841	847	Treatment	Radiation Therapy		Radiation 1							stable disease								Distant Site		10	3000	No	External	cgy			
+TCGA-DD-A4NH	162	305	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A4NQ	151	290	Treatment	Chemotherapy		Sorafenib											No			No										
+TCGA-DD-A4NS	1116	1314	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-DD-A4NS	1349	1425	Treatment	Chemotherapy		Veliparib							clinical progressive disease				No			Yes										
+TCGA-DD-A4NS	1685	1903	Treatment	Chemotherapy		Ly228820							clinical progressive disease				No			Yes										
+TCGA-DD-A4NS	1349	1425	Treatment	Chemotherapy		Temozolomide							clinical progressive disease				No			Yes										
+TCGA-DD-A4NS	1092	1099	Treatment	Radiation Therapy		Radiation 1															Regional Site		5	20	No	Systemic	gy			
+TCGA-DD-AAEE	595	692	Treatment	Radiation Therapy		Radiation 1															Distant Recurrence		2	14000	No	External	cgy			
+TCGA-ED-A459	38	103	Treatment	Ancillary		Alvesin							complete response				No			No										
+TCGA-ED-A459	18	37	Treatment	Radiation Therapy		Radiation 1							complete response								Primary Tumor Field			60	No	External	gy			
+TCGA-EP-A2KA	312		Treatment	Targeted Molecular Therapy		Sorafenib											Yes			No										
+TCGA-FV-A3I0	166	586	Treatment	Chemotherapy		Gemcitabine							clinical progressive disease				No			No										
+TCGA-FV-A3R2	25		Treatment	Chemotherapy		Cisplatin											No			No										
+TCGA-FV-A3R2	25		Treatment	Chemotherapy		Gemcitabine											No			No										
+TCGA-G3-A25S	313	348	Treatment	Chemotherapy		Sunitinib							clinical progressive disease	sunitinib vs sorafenib			No			Yes										
+TCGA-G3-A25S	351	369	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-G3-A25S	129	393	Treatment	Radiation Therapy		Radiation 1							radiographic progressive disease								Distant Recurrence		25	76	No	External	gy			
+TCGA-G3-A3CH	717		Treatment	Chemotherapy		Sorafenib											Yes			No										
+TCGA-G3-A3CJ	346	367	Treatment	Targeted Molecular Therapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-G3-A3CJ	559		Treatment	Radiation Therapy		Radiation 1															Distant Site				Yes	External				
+TCGA-G3-A5SI	599	733	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-G3-AAV5	227		Treatment	Chemotherapy		Sorafenib Vs Sorafenib + Doxorubicin								chemotherapy			Yes			Yes										
+TCGA-K7-AAU7	42		Treatment	Not Specified		Gemcitabine											Yes			No										
+TCGA-K7-AAU7	42		Treatment	Not Specified		Cisplatin											Yes			No										
+TCGA-LG-A9QD	61		Treatment	Chemotherapy		Sorafenib											Yes			No										
+TCGA-UB-A7MA	60	207	Treatment	Chemotherapy		Gemcitabine							clinical progressive disease				No			No										
+TCGA-UB-A7MA	60	207	Treatment	Chemotherapy		Cisplatin							clinical progressive disease				No			No										
+TCGA-UB-A7MA	485		Treatment	Targeted Molecular Therapy		Temozolomide											Yes			Yes										
+TCGA-UB-A7MA	485		Treatment	Targeted Molecular Therapy		Sorafenib											Yes			Yes										
+TCGA-UB-A7MB	123	168	Treatment	Targeted Molecular Therapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-UB-A7MB	187	382	Treatment	Targeted Molecular Therapy									stable disease	torc1/2 inhibitor			No			Yes										
+TCGA-UB-A7MB	480	510	Treatment	Chemotherapy		Fluorouracil							clinical progressive disease				No			No										
+TCGA-UB-A7MB	480	510	Treatment	Chemotherapy		Oxaliplatin							clinical progressive disease				No			No										
+TCGA-UB-A7MB	525		Treatment	Targeted Molecular Therapy										imid			Yes			Yes										
+TCGA-WX-AA44	306	375	Treatment	Targeted Molecular Therapy		Sorafenib							partial response				No			No										
+TCGA-WX-AA44	357	357	Treatment	Radiation Therapy		Radiation 1							partial response								Primary Tumor Field		1	0.29	No	Internal				
+TCGA-WX-AA47	331	493	Treatment	Chemotherapy		Sorafenib							clinical progressive disease				No			No										
+TCGA-WX-AA47	156	340	Treatment	Radiation Therapy		Radiation 1							radiographic progressive disease								Regional Site				No	Internal				

@@ -1,0 +1,373 @@
+PATIENT_ID	START_DATE	STOP_DATE	EVENT_TYPE	SAMPLE_ID	METHOD_OF_SAMPLE_PROCUREMENT	COUNTRY	SAMPLE_PRESCREENED	SUBMITTED_FOR_LCE	TOP_SLIDE_SUBMITTED	TUMOR_NECROSIS_PERCENT	TUMOR_NUCLEI_PERCENT	TUMOR_WEIGHT	VESSEL_USED	FFPE_TUMOR_SLIDE_SUBMITTED
+TCGA-2V-A95S	70		Sample Acquisition	TCGA-2V-A95S-01	Surgical Resection	United States	Yes	No		20	80	100	Cryovial	
+TCGA-2Y-A9GS	0		Sample Acquisition	TCGA-2Y-A9GS-01	Surgical Resection	United States	Yes	No		1	80	91	Other	
+TCGA-2Y-A9GT	0		Sample Acquisition	TCGA-2Y-A9GT-01	Surgical Resection	United States	Yes	No		0	100	83	Other	
+TCGA-2Y-A9GU	0		Sample Acquisition	TCGA-2Y-A9GU-01	Surgical Resection	United States	Yes	No		0	92	110	Other	
+TCGA-2Y-A9GV	0		Sample Acquisition	TCGA-2Y-A9GV-01	Surgical Resection	United States	Yes	No		0	100	113	Other	
+TCGA-2Y-A9GW	0		Sample Acquisition	TCGA-2Y-A9GW-01	Surgical Resection	United States	Yes	No		0	90	106	Other	
+TCGA-2Y-A9GX	0		Sample Acquisition	TCGA-2Y-A9GX-01	Surgical Resection	United States	Yes	No		0	85	129	Other	
+TCGA-2Y-A9GY	0		Sample Acquisition	TCGA-2Y-A9GY-01	Surgical Resection	United States	Yes	No		5	60	163	Other	
+TCGA-2Y-A9GZ	0		Sample Acquisition	TCGA-2Y-A9GZ-01	Surgical Resection	United States	Yes	No		10	90	121	Other	
+TCGA-2Y-A9H0	0		Sample Acquisition	TCGA-2Y-A9H0-01	Surgical Resection	United States	Yes	No		0	98	129	Other	
+TCGA-2Y-A9H1	0		Sample Acquisition	TCGA-2Y-A9H1-01	Surgical Resection	United States	Yes	No		0	95	118	Other	
+TCGA-2Y-A9H2	0		Sample Acquisition	TCGA-2Y-A9H2-01	Surgical Resection	United States	Yes	No		5	65	135	Other	
+TCGA-2Y-A9H3	0		Sample Acquisition	TCGA-2Y-A9H3-01	Surgical Resection	United States	Yes	No		2	88	108	Other	
+TCGA-2Y-A9H4	0		Sample Acquisition	TCGA-2Y-A9H4-01	Surgical Resection	United States	Yes	No		10	70	103	Other	
+TCGA-2Y-A9H5	0		Sample Acquisition	TCGA-2Y-A9H5-01	Surgical Resection	United States	Yes	No		2	80	114	Other	
+TCGA-2Y-A9H6	0		Sample Acquisition	TCGA-2Y-A9H6-01	Surgical Resection	United States	Yes	No		0	90	104	Other	
+TCGA-2Y-A9H7	0		Sample Acquisition	TCGA-2Y-A9H7-01	Surgical Resection	United States	Yes	No		0	90	116	Other	
+TCGA-2Y-A9H8	0		Sample Acquisition	TCGA-2Y-A9H8-01	Surgical Resection	United States	Yes	No		1	88	132	Other	
+TCGA-2Y-A9H9	0		Sample Acquisition	TCGA-2Y-A9H9-01	Surgical Resection	United States	Yes	No		20	70	126	Other	
+TCGA-2Y-A9HA	0		Sample Acquisition	TCGA-2Y-A9HA-01	Surgical Resection	United States	Yes	No		0	90	132	Other	
+TCGA-2Y-A9HB	0		Sample Acquisition	TCGA-2Y-A9HB-01	Surgical Resection	United States	Yes	No		2	90	101	Other	
+TCGA-3K-AAZ8	0		Sample Acquisition	TCGA-3K-AAZ8-01	Surgical Resection	United States	Yes	Yes		0	100	210	Cryovial	
+TCGA-4R-AA8I	0		Sample Acquisition	TCGA-4R-AA8I-01	Surgical Resection	United States	Yes	No		5	90	120	Cryosette	
+TCGA-5C-A9VG	0		Sample Acquisition	TCGA-5C-A9VG-01	Surgical Resection	Russia	Yes	No		0	85	200	Cryomold	
+TCGA-5C-A9VH	20		Sample Acquisition	TCGA-5C-A9VH-01	Surgical Resection	Russia	Yes	No		0	65	200	Cryomold	
+TCGA-5C-AAPD	0		Sample Acquisition	TCGA-5C-AAPD-01	Surgical Resection	Russia	Yes	No		0	60	215	Cryomold	
+TCGA-5R-AA1C	0		Sample Acquisition	TCGA-5R-AA1C-01	Surgical Resection	Russia	Yes	No		0	100	600	Cryovial	
+TCGA-5R-AA1D	0		Sample Acquisition	TCGA-5R-AA1D-01	Surgical Resection	Russia	Yes	No		0	80	700	Cryovial	
+TCGA-5R-AAAM	0		Sample Acquisition	TCGA-5R-AAAM-01	Surgical Resection	Russia	Yes	No		0	100	700	Cryovial	
+TCGA-BC-4072	0		Sample Acquisition	TCGA-BC-4072-01	Surgical Resection	United States	Yes		No	0	70	336	Cryovial	
+TCGA-BC-4073	0		Sample Acquisition	TCGA-BC-4073-01		United States	Yes		Yes	0	50	230	Cassette	
+TCGA-BC-A3KF	0		Sample Acquisition	TCGA-BC-A3KF-01	Surgical Resection	United States	Yes		No	5	70	469	Cryovial	No
+TCGA-BC-A3KG	0		Sample Acquisition	TCGA-BC-A3KG-01	Surgical Resection	United States	Yes		No	30	75	928	Cryovial	No
+TCGA-BC-A5W4	0		Sample Acquisition	TCGA-BC-A5W4-01	Surgical Resection	United States	Yes	No		5	95	581	Cryovial	
+TCGA-BC-A8YO	0		Sample Acquisition	TCGA-BC-A8YO-01	Surgical Resection	United States	Yes	Yes		30	70	653	Cryovial	
+TCGA-BC-A10Q	0		Sample Acquisition	TCGA-BC-A10Q-01		United States	Yes		No	0	90	382	Cryovial	
+TCGA-BC-A10R	0		Sample Acquisition	TCGA-BC-A10R-01		United States	Yes		No	10	70	230	Cryovial	
+TCGA-BC-A10S	0		Sample Acquisition	TCGA-BC-A10S-01		United States	Yes		No	0	80	573	Cryovial	
+TCGA-BC-A10T	0		Sample Acquisition	TCGA-BC-A10T-01	Surgical Resection	United States	Yes		No	0	95	1051	Cryovial	
+TCGA-BC-A10U	0		Sample Acquisition	TCGA-BC-A10U-01		United States	Yes		No	0	95	602	Cryovial	
+TCGA-BC-A10W	0		Sample Acquisition	TCGA-BC-A10W-01		United States	Yes		No	0	95	614	Cryovial	
+TCGA-BC-A10X	0		Sample Acquisition	TCGA-BC-A10X-01		United States	Yes		No	5	80	664	Cryovial	
+TCGA-BC-A10Y	0		Sample Acquisition	TCGA-BC-A10Y-01	Surgical Resection	United States	Yes		No	0	85	492	Cryovial	
+TCGA-BC-A10Z	0		Sample Acquisition	TCGA-BC-A10Z-01	Surgical Resection	United States	Yes		No	0	100	252	Cryovial	
+TCGA-BC-A69H	0		Sample Acquisition	TCGA-BC-A69H-01	Surgical Resection	United States	Yes	Yes		40	50	641	Cryovial	
+TCGA-BC-A69I	0		Sample Acquisition	TCGA-BC-A69I-01	Surgical Resection	United States	Yes	No		5	90	556	Cryovial	
+TCGA-BC-A110	0		Sample Acquisition	TCGA-BC-A110-01		United States	Yes		No	5	90	355	Cryovial	
+TCGA-BC-A112	0		Sample Acquisition	TCGA-BC-A112-01		United States	Yes		No	0	70	143	Cryovial	
+TCGA-BC-A216	0		Sample Acquisition	TCGA-BC-A216-01	Surgical Resection	United States	Yes		No	5	80	193	Cryovial	No
+TCGA-BC-A217	0		Sample Acquisition	TCGA-BC-A217-01	Surgical Resection	United States	Yes		No	0	90	280	Cryovial	No
+TCGA-BD-A2L6	0		Sample Acquisition	TCGA-BD-A2L6-01	Surgical Resection	United States	Yes		Yes	0	80	250	Biospecimen Storage Bage	No
+TCGA-BD-A3EP	0		Sample Acquisition	TCGA-BD-A3EP-01	Surgical Resection	United States	Yes		Yes	10	70	250	Biospecimen Storage Bage	No
+TCGA-BW-A5NO	0		Sample Acquisition	TCGA-BW-A5NO-01	Surgical Resection	United States	Yes	No		0	80	200	Cryovial	
+TCGA-BW-A5NP	0		Sample Acquisition	TCGA-BW-A5NP-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-BW-A5NQ	0		Sample Acquisition	TCGA-BW-A5NQ-01	Surgical Resection	United States	Yes	No		0	80	200	Cryovial	
+TCGA-CC-5258	0		Sample Acquisition	TCGA-CC-5258-01	Surgical Resection		Yes		Yes	10	95	1700	Bag	
+TCGA-CC-5259	0		Sample Acquisition	TCGA-CC-5259-01	Surgical Resection		Yes		Yes	5	75	400	Bag	
+TCGA-CC-5260	0		Sample Acquisition	TCGA-CC-5260-01	Surgical Resection		Yes		Yes	1	80	600	Bag	
+TCGA-CC-5261	12		Sample Acquisition	TCGA-CC-5261-01	Surgical Resection		Yes		Yes	1	90	450	Bag	
+TCGA-CC-5262	0		Sample Acquisition	TCGA-CC-5262-01	Surgical Resection		Yes		Yes	5	75	800	Bag	
+TCGA-CC-5263	0		Sample Acquisition	TCGA-CC-5263-01	Surgical Resection		Yes		Yes	0	90	900	Bag	
+TCGA-CC-5264	0		Sample Acquisition	TCGA-CC-5264-01	Surgical Resection		Yes		Yes	1	90	550	Bag	
+TCGA-CC-A1HT	0		Sample Acquisition	TCGA-CC-A1HT-01		Vietnam	Yes		Yes	15	70	500	Bag	No
+TCGA-CC-A3M9	0		Sample Acquisition	TCGA-CC-A3M9-01	Surgical Resection	Vietnam	Yes		Yes	0	75	200	Other	
+TCGA-CC-A3MA	0		Sample Acquisition	TCGA-CC-A3MA-01	Surgical Resection	Vietnam	Yes		Yes	0	75	800	Other	
+TCGA-CC-A3MB	0		Sample Acquisition	TCGA-CC-A3MB-01	Surgical Resection	Vietnam	Yes		Yes	0	75	500	Other	
+TCGA-CC-A3MC	0		Sample Acquisition	TCGA-CC-A3MC-01	Surgical Resection	Vietnam	Yes		Yes	0	80	450	Other	
+TCGA-CC-A5UC	0		Sample Acquisition	TCGA-CC-A5UC-01	Surgical Resection	Vietnam	Yes	No		0	75	250	Other	
+TCGA-CC-A5UD	0		Sample Acquisition	TCGA-CC-A5UD-01	Surgical Resection	Vietnam	Yes	No		2	75	350	Other	
+TCGA-CC-A5UE	0		Sample Acquisition	TCGA-CC-A5UE-01	Surgical Resection	Vietnam	Yes	No		0	85	350	Other	
+TCGA-CC-A7IE	0		Sample Acquisition	TCGA-CC-A7IE-01	Surgical Resection	Vietnam	Yes	No		1	95	340	Other	
+TCGA-CC-A7IF	0		Sample Acquisition	TCGA-CC-A7IF-01	Surgical Resection	Vietnam	Yes	No		0	95	440	Other	
+TCGA-CC-A7IG	0		Sample Acquisition	TCGA-CC-A7IG-01	Surgical Resection	Vietnam	Yes	No		1	90	280	Other	
+TCGA-CC-A7IH	0		Sample Acquisition	TCGA-CC-A7IH-01	Surgical Resection	Vietnam	Yes	No		0	95	370	Other	
+TCGA-CC-A7II	0		Sample Acquisition	TCGA-CC-A7II-01	Surgical Resection	Vietnam	Yes	No		10	70	350	Other	
+TCGA-CC-A7IJ	0		Sample Acquisition	TCGA-CC-A7IJ-01	Surgical Resection	Vietnam	Yes	No		10	80	320	Other	
+TCGA-CC-A7IK	0		Sample Acquisition	TCGA-CC-A7IK-01	Surgical Resection	Vietnam	Yes	No		0	95	450	Other	
+TCGA-CC-A7IL	0		Sample Acquisition	TCGA-CC-A7IL-01	Surgical Resection	Vietnam	Yes	No		0	95	260	Other	
+TCGA-CC-A8HT	0		Sample Acquisition	TCGA-CC-A8HT-01	Surgical Resection	Vietnam	Yes	No		0	85	270	Other	
+TCGA-CC-A8HU	0		Sample Acquisition	TCGA-CC-A8HU-01	Surgical Resection	Vietnam	Yes	No		2	80	390	Other	
+TCGA-CC-A8HV	0		Sample Acquisition	TCGA-CC-A8HV-01	Surgical Resection	Vietnam	Yes	No		0	90	250	Other	
+TCGA-CC-A9FS	0		Sample Acquisition	TCGA-CC-A9FS-01	Surgical Resection	Vietnam	Yes	No		0	80	220	Other	
+TCGA-CC-A9FU	0		Sample Acquisition	TCGA-CC-A9FU-01	Surgical Resection	Vietnam	Yes	No		0	90	280	Other	
+TCGA-CC-A9FV	0		Sample Acquisition	TCGA-CC-A9FV-01	Surgical Resection	Vietnam	Yes	No		0	90	400	Other	
+TCGA-CC-A9FW	0		Sample Acquisition	TCGA-CC-A9FW-01	Surgical Resection	Vietnam	Yes	No		0	90	250	Other	
+TCGA-CC-A123	0		Sample Acquisition	TCGA-CC-A123-01	Surgical Resection		Yes		Yes	0	80	330	Cassette	
+TCGA-DD-A1E9	0		Sample Acquisition	TCGA-DD-A1E9-01	Surgical Resection	United States	Yes		Yes	5	90	200	Cryovial	No
+TCGA-DD-A1EA	0		Sample Acquisition	TCGA-DD-A1EA-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A1EB	0		Sample Acquisition	TCGA-DD-A1EB-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A1EC	0		Sample Acquisition	TCGA-DD-A1EC-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A1ED	0		Sample Acquisition	TCGA-DD-A1ED-01	Surgical Resection	United States	Yes		Yes	20	75	200	Cryovial	No
+TCGA-DD-A1EE	0		Sample Acquisition	TCGA-DD-A1EE-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A1EF	0		Sample Acquisition	TCGA-DD-A1EF-01	Surgical Resection	United States	Yes		Yes	25	60	200	Cryovial	No
+TCGA-DD-A1EG	0		Sample Acquisition	TCGA-DD-A1EG-01	Surgical Resection	United States	Yes		Yes	10	70	200	Cryovial	No
+TCGA-DD-A1EH	0		Sample Acquisition	TCGA-DD-A1EH-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A1EI	0		Sample Acquisition	TCGA-DD-A1EI-01	Surgical Resection	United States	Yes		Yes	0	60	200	Cryovial	No
+TCGA-DD-A1EJ	0		Sample Acquisition	TCGA-DD-A1EJ-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A1EK	0		Sample Acquisition	TCGA-DD-A1EK-01	Surgical Resection	United States	Yes		Yes	5	90	200	Cryovial	No
+TCGA-DD-A1EL	0		Sample Acquisition	TCGA-DD-A1EL-01	Surgical Resection	United States	Yes		Yes	1	95	200	Cryovial	No
+TCGA-DD-A3A0	0		Sample Acquisition	TCGA-DD-A3A0-01	Surgical Resection	United States	Yes		Yes	0	75	200	Cryovial	No
+TCGA-DD-A3A1	0		Sample Acquisition	TCGA-DD-A3A1-01	Surgical Resection	United States	Yes		Yes	5	90	200	Cryovial	No
+TCGA-DD-A3A2	0		Sample Acquisition	TCGA-DD-A3A2-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A3	0		Sample Acquisition	TCGA-DD-A3A3-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A4	0		Sample Acquisition	TCGA-DD-A3A4-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A3A5	0		Sample Acquisition	TCGA-DD-A3A5-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A6	0		Sample Acquisition	TCGA-DD-A3A6-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A7	0		Sample Acquisition	TCGA-DD-A3A7-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A8	0		Sample Acquisition	TCGA-DD-A3A8-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A3A9	0		Sample Acquisition	TCGA-DD-A3A9-01	Surgical Resection	United States	Yes		Yes	5	60	200	Cryovial	No
+TCGA-DD-A4NA	0		Sample Acquisition	TCGA-DD-A4NA-01	Surgical Resection	United States	Yes		Yes	2	90	200	Cryovial	
+TCGA-DD-A4NB	0		Sample Acquisition	TCGA-DD-A4NB-01	Surgical Resection	United States	Yes		Yes	5	80	200	Cryovial	
+TCGA-DD-A4ND	0		Sample Acquisition	TCGA-DD-A4ND-01	Surgical Resection	United States	Yes		Yes	5	75	200	Cryovial	
+TCGA-DD-A4NE	0		Sample Acquisition	TCGA-DD-A4NE-01	Surgical Resection	United States	Yes		Yes	5	60	200	Cryovial	
+TCGA-DD-A4NF	0		Sample Acquisition	TCGA-DD-A4NF-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-DD-A4NG	0		Sample Acquisition	TCGA-DD-A4NG-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A4NH	0		Sample Acquisition	TCGA-DD-A4NH-01	Surgical Resection	United States	Yes	Yes		5	50	200	Cryovial	
+TCGA-DD-A4NI	0		Sample Acquisition	TCGA-DD-A4NI-01	Surgical Resection	United States	Yes	No		5	70	200	Cryovial	
+TCGA-DD-A4NJ	0		Sample Acquisition	TCGA-DD-A4NJ-01	Surgical Resection	United States	Yes	No		5	80	200	Cryovial	
+TCGA-DD-A4NK	0		Sample Acquisition	TCGA-DD-A4NK-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-DD-A4NL	0		Sample Acquisition	TCGA-DD-A4NL-01	Surgical Resection	United States	Yes	Yes		55	45	200	Cryovial	
+TCGA-DD-A4NN	0		Sample Acquisition	TCGA-DD-A4NN-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A4NO	0		Sample Acquisition	TCGA-DD-A4NO-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A4NP	0		Sample Acquisition	TCGA-DD-A4NP-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A4NQ	0		Sample Acquisition	TCGA-DD-A4NQ-01	Surgical Resection	United States	Yes	No		15	90	200	Cryovial	
+TCGA-DD-A4NR	0		Sample Acquisition	TCGA-DD-A4NR-01	Surgical Resection	United States	Yes	No		5	70	200	Cryovial	
+TCGA-DD-A4NS	0		Sample Acquisition	TCGA-DD-A4NS-01	Surgical Resection	United States	Yes	No		5	75	200	Cryovial	
+TCGA-DD-A4NV	0		Sample Acquisition	TCGA-DD-A4NV-01	Surgical Resection	United States	Yes	No		5	85	200	Cryovial	
+TCGA-DD-A11A	0		Sample Acquisition	TCGA-DD-A11A-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A11B	0		Sample Acquisition	TCGA-DD-A11B-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A11C	0		Sample Acquisition	TCGA-DD-A11C-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A11D	0		Sample Acquisition	TCGA-DD-A11D-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A39V	0		Sample Acquisition	TCGA-DD-A39V-01	Surgical Resection	United States	Yes		Yes	5	95	200	Cryovial	No
+TCGA-DD-A39W	0		Sample Acquisition	TCGA-DD-A39W-01	Surgical Resection	United States	Yes		Yes	0	75	200	Cryovial	No
+TCGA-DD-A39X	0		Sample Acquisition	TCGA-DD-A39X-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A39Y	0		Sample Acquisition	TCGA-DD-A39Y-01	Surgical Resection	United States	Yes		Yes	0	85	200	Cryovial	No
+TCGA-DD-A39Z	0		Sample Acquisition	TCGA-DD-A39Z-01	Surgical Resection	United States	Yes		Yes	0	70	200	Cryovial	No
+TCGA-DD-A73A	0		Sample Acquisition	TCGA-DD-A73A-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-DD-A73B	0		Sample Acquisition	TCGA-DD-A73B-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-DD-A73C	0		Sample Acquisition	TCGA-DD-A73C-01	Surgical Resection	United States	Yes	No		5	90	200	Cryovial	
+TCGA-DD-A73D	0		Sample Acquisition	TCGA-DD-A73D-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A73E	0		Sample Acquisition	TCGA-DD-A73E-01	Surgical Resection	United States	Yes	No		5	95	200	Cryovial	
+TCGA-DD-A73F	0		Sample Acquisition	TCGA-DD-A73F-01	Surgical Resection	United States	Yes	Yes		5	35	200	Cryovial	
+TCGA-DD-A73G	0		Sample Acquisition	TCGA-DD-A73G-01	Surgical Resection	United States	Yes	No		5	70	200	Cryovial	
+TCGA-DD-A113	0		Sample Acquisition	TCGA-DD-A113-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A114	0		Sample Acquisition	TCGA-DD-A114-01	Surgical Resection	United States	Yes		Yes	0	60	200	Cryovial	No
+TCGA-DD-A115	0		Sample Acquisition	TCGA-DD-A115-01	Surgical Resection	United States	Yes		Yes	0	90	200	Cryovial	No
+TCGA-DD-A116	0		Sample Acquisition	TCGA-DD-A116-01	Surgical Resection	United States	Yes		Yes	0	80	200	Cryovial	No
+TCGA-DD-A118	0		Sample Acquisition	TCGA-DD-A118-01	Surgical Resection	United States	Yes		Yes	0	95	200	Cryovial	No
+TCGA-DD-A119	0		Sample Acquisition	TCGA-DD-A119-01	Surgical Resection	United States	Yes		Yes	0	80	200	Cryovial	No
+TCGA-DD-AA3A	0		Sample Acquisition	TCGA-DD-AA3A-01	Surgical Resection	Algeria	Yes	Yes		30	70	200	Cryovial	
+TCGA-DD-AAC8	0		Sample Acquisition	TCGA-DD-AAC8-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAC9	0		Sample Acquisition	TCGA-DD-AAC9-01	Surgical Resection	Korea South	Yes	No		5	70	50	Polycon	
+TCGA-DD-AACA	0		Sample Acquisition	TCGA-DD-AACA-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACB	0		Sample Acquisition	TCGA-DD-AACB-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACC	0		Sample Acquisition	TCGA-DD-AACC-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACD	0		Sample Acquisition	TCGA-DD-AACD-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACE	0		Sample Acquisition	TCGA-DD-AACE-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACF	0		Sample Acquisition	TCGA-DD-AACF-01	Surgical Resection	Korea South	Yes	No		5	70	50	Polycon	
+TCGA-DD-AACG	0		Sample Acquisition	TCGA-DD-AACG-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACH	0		Sample Acquisition	TCGA-DD-AACH-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AACI	0		Sample Acquisition	TCGA-DD-AACI-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACJ	0		Sample Acquisition	TCGA-DD-AACJ-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACK	0		Sample Acquisition	TCGA-DD-AACK-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACL	0		Sample Acquisition	TCGA-DD-AACL-01	Surgical Resection	Korea South	Yes	No		10	80	50	Polycon	
+TCGA-DD-AACM	0		Sample Acquisition	TCGA-DD-AACM-01	Surgical Resection	Korea South	Yes	No		5	80	50	Polycon	
+TCGA-DD-AACN	0		Sample Acquisition	TCGA-DD-AACN-01	Surgical Resection	Korea South	Yes	No		5	75	50	Polycon	
+TCGA-DD-AACO	0		Sample Acquisition	TCGA-DD-AACO-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACP	0		Sample Acquisition	TCGA-DD-AACP-01	Surgical Resection	Korea South	Yes	No		15	95	50	Polycon	
+TCGA-DD-AACQ	0		Sample Acquisition	TCGA-DD-AACQ-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACS	0		Sample Acquisition	TCGA-DD-AACS-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACT	0		Sample Acquisition	TCGA-DD-AACT-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACU	0		Sample Acquisition	TCGA-DD-AACU-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACV	0		Sample Acquisition	TCGA-DD-AACV-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACW	0		Sample Acquisition	TCGA-DD-AACW-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACX	0		Sample Acquisition	TCGA-DD-AACX-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACY	0		Sample Acquisition	TCGA-DD-AACY-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AACZ	0		Sample Acquisition	TCGA-DD-AACZ-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAD0	0		Sample Acquisition	TCGA-DD-AAD0-01	Surgical Resection	Korea South	Yes	No		5	85	50	Polycon	
+TCGA-DD-AAD1	0		Sample Acquisition	TCGA-DD-AAD1-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAD2	0		Sample Acquisition	TCGA-DD-AAD2-01	Surgical Resection	Korea South	Yes	No		5	60	50	Polycon	
+TCGA-DD-AAD3	0		Sample Acquisition	TCGA-DD-AAD3-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAD5	0		Sample Acquisition	TCGA-DD-AAD5-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAD6	0		Sample Acquisition	TCGA-DD-AAD6-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAD8	0		Sample Acquisition	TCGA-DD-AAD8-01	Surgical Resection	Korea South	Yes	No		5	60	50	Polycon	
+TCGA-DD-AADA	0		Sample Acquisition	TCGA-DD-AADA-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADB	0		Sample Acquisition	TCGA-DD-AADB-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADC	0		Sample Acquisition	TCGA-DD-AADC-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADD	0		Sample Acquisition	TCGA-DD-AADD-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADE	0		Sample Acquisition	TCGA-DD-AADE-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADF	0		Sample Acquisition	TCGA-DD-AADF-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADG	0		Sample Acquisition	TCGA-DD-AADG-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADI	0		Sample Acquisition	TCGA-DD-AADI-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADJ	0		Sample Acquisition	TCGA-DD-AADJ-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADK	0		Sample Acquisition	TCGA-DD-AADK-01	Surgical Resection	Korea South	Yes	No		5	80	50	Polycon	
+TCGA-DD-AADL	0		Sample Acquisition	TCGA-DD-AADL-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AADM	0		Sample Acquisition	TCGA-DD-AADM-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADN	0		Sample Acquisition	TCGA-DD-AADN-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AADO	0		Sample Acquisition	TCGA-DD-AADO-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AADP	0		Sample Acquisition	TCGA-DD-AADP-01	Surgical Resection	Korea South	Yes	No		5	85	50	Polycon	
+TCGA-DD-AADQ	0		Sample Acquisition	TCGA-DD-AADQ-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AADR	0		Sample Acquisition	TCGA-DD-AADR-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADS	0		Sample Acquisition	TCGA-DD-AADS-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADU	0		Sample Acquisition	TCGA-DD-AADU-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AADV	0		Sample Acquisition	TCGA-DD-AADV-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AADW	0		Sample Acquisition	TCGA-DD-AADW-01	Surgical Resection	Korea South	Yes	No		5	80	50	Polycon	
+TCGA-DD-AADY	0		Sample Acquisition	TCGA-DD-AADY-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAE0	0		Sample Acquisition	TCGA-DD-AAE0-01	Surgical Resection	Korea South	Yes	No		10	60	50	Polycon	
+TCGA-DD-AAE1	0		Sample Acquisition	TCGA-DD-AAE1-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAE2	0		Sample Acquisition	TCGA-DD-AAE2-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAE3	0		Sample Acquisition	TCGA-DD-AAE3-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAE4	0		Sample Acquisition	TCGA-DD-AAE4-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAE6	0		Sample Acquisition	TCGA-DD-AAE6-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAE7	0		Sample Acquisition	TCGA-DD-AAE7-01	Surgical Resection	Korea South	Yes	No		5	80	50	Polycon	
+TCGA-DD-AAE8	0		Sample Acquisition	TCGA-DD-AAE8-01	Surgical Resection	Korea South	Yes	No		10	95	50	Polycon	
+TCGA-DD-AAE9	0		Sample Acquisition	TCGA-DD-AAE9-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEA	0		Sample Acquisition	TCGA-DD-AAEA-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEB	0		Sample Acquisition	TCGA-DD-AAEB-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAED	0		Sample Acquisition	TCGA-DD-AAED-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEE	0		Sample Acquisition	TCGA-DD-AAEE-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEG	0		Sample Acquisition	TCGA-DD-AAEG-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEH	0		Sample Acquisition	TCGA-DD-AAEH-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEI	0		Sample Acquisition	TCGA-DD-AAEI-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAEK	0		Sample Acquisition	TCGA-DD-AAEK-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAVP	0		Sample Acquisition	TCGA-DD-AAVP-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAVQ	0		Sample Acquisition	TCGA-DD-AAVQ-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAVR	0		Sample Acquisition	TCGA-DD-AAVR-01	Surgical Resection	Korea South	Yes	No		5	85	50	Polycon	
+TCGA-DD-AAVS	0		Sample Acquisition	TCGA-DD-AAVS-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAVU	0		Sample Acquisition	TCGA-DD-AAVU-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAVV	0		Sample Acquisition	TCGA-DD-AAVV-01	Surgical Resection	Korea South	Yes	No		5	60	50	Polycon	
+TCGA-DD-AAVW	0		Sample Acquisition	TCGA-DD-AAVW-01	Surgical Resection	Korea South	Yes	No		5	90	50	Polycon	
+TCGA-DD-AAVX	0		Sample Acquisition	TCGA-DD-AAVX-01	Surgical Resection	Korea South	Yes	No		15	80	50	Polycon	
+TCGA-DD-AAVY	0		Sample Acquisition	TCGA-DD-AAVY-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAVZ	0		Sample Acquisition	TCGA-DD-AAVZ-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAW0	0		Sample Acquisition	TCGA-DD-AAW0-01	Transplant	Korea South	Yes	No		5	60	50	Polycon	
+TCGA-DD-AAW1	0		Sample Acquisition	TCGA-DD-AAW1-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAW2	0		Sample Acquisition	TCGA-DD-AAW2-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-DD-AAW3	0		Sample Acquisition	TCGA-DD-AAW3-01	Surgical Resection	Korea South	Yes	No		5	95	50	Polycon	
+TCGA-ED-A4XI	0		Sample Acquisition	TCGA-ED-A4XI-01	Surgical Resection	Vietnam	Yes	No		5	60	1572	Cassette	
+TCGA-ED-A5KG	0		Sample Acquisition	TCGA-ED-A5KG-01		Vietnam	Yes	No		0	90	2863	Cassette	
+TCGA-ED-A7PX	0		Sample Acquisition	TCGA-ED-A7PX-01		Vietnam	Yes	No		5	95	1133	Cassette	
+TCGA-ED-A7PY	0		Sample Acquisition	TCGA-ED-A7PY-01		Vietnam	Yes	No		0	75	816	Cassette	
+TCGA-ED-A7PZ	0		Sample Acquisition	TCGA-ED-A7PZ-01		Vietnam	Yes	No		0	100	2924	Cassette	
+TCGA-ED-A7XO	0		Sample Acquisition	TCGA-ED-A7XO-01	Surgical Resection	Vietnam	Yes	No		0	85	1819	Cassette	
+TCGA-ED-A7XP	0		Sample Acquisition	TCGA-ED-A7XP-01	Surgical Resection	Vietnam	Yes	No		0	100	998	Cassette	
+TCGA-ED-A8O5	0		Sample Acquisition	TCGA-ED-A8O5-01	Surgical Resection	Vietnam	Yes	No		0	100	1445	Cassette	
+TCGA-ED-A8O6	0		Sample Acquisition	TCGA-ED-A8O6-01	Surgical Resection	Vietnam	Yes	No		0	100	1366	Cassette	
+TCGA-ED-A66X	0		Sample Acquisition	TCGA-ED-A66X-01	Surgical Resection	Vietnam	Yes	No		5	93	2740	Cassette	
+TCGA-ED-A66Y	0		Sample Acquisition	TCGA-ED-A66Y-01	Surgical Resection	Vietnam	Yes	No		0	90	2126	Cassette	
+TCGA-ED-A82E	0		Sample Acquisition	TCGA-ED-A82E-01	Surgical Resection	Vietnam	Yes	No		0	85	2068	Cassette	
+TCGA-ED-A97K	0		Sample Acquisition	TCGA-ED-A97K-01		Vietnam	Yes	No		0	99	2095	Cassette	
+TCGA-ED-A459	0		Sample Acquisition	TCGA-ED-A459-01	Surgical Resection	Vietnam	Yes	No		0	85	2245	Cassette	
+TCGA-ED-A627	0		Sample Acquisition	TCGA-ED-A627-01	Surgical Resection	Russia	Yes	No		0	100	1386	Cassette	
+TCGA-EP-A2KA	0		Sample Acquisition	TCGA-EP-A2KA-01	Surgical Resection	United States	Yes		No	5	95	401	Cryovial	Yes
+TCGA-EP-A2KB	0		Sample Acquisition	TCGA-EP-A2KB-01	Surgical Resection	United States	Yes		No	5	95	1258	Cryovial	Yes
+TCGA-EP-A2KC	0		Sample Acquisition	TCGA-EP-A2KC-01	Surgical Resection	United States	Yes		No	0	100	274	Cryovial	Yes
+TCGA-EP-A3JL	0		Sample Acquisition	TCGA-EP-A3JL-01	Surgical Resection	United States	Yes		No	5	95	576	Cryovial	Yes
+TCGA-EP-A3RK	0		Sample Acquisition	TCGA-EP-A3RK-01	Surgical Resection	United States	Yes		Yes	5	95	1060	Cryovial	
+TCGA-EP-A12J	0		Sample Acquisition	TCGA-EP-A12J-01	Surgical Resection	United States	Yes		Yes	10	95	318	Cryovial	Yes
+TCGA-EP-A26S	0		Sample Acquisition	TCGA-EP-A26S-01	Surgical Resection	United States	Yes		Yes	5	95	525	Cryovial	No
+TCGA-ES-A2HS	0		Sample Acquisition	TCGA-ES-A2HS-01	Surgical Resection	United States	Yes		Yes	0	95	250	Freezer Bag	No
+TCGA-ES-A2HT	0		Sample Acquisition	TCGA-ES-A2HT-01	Surgical Resection	United States	Yes		Yes	5	95	250	Freezer Bag	No
+TCGA-FV-A2QQ	0		Sample Acquisition	TCGA-FV-A2QQ-01		United States	Yes		No	0	85	154	Cryovial	No
+TCGA-FV-A2QR	0		Sample Acquisition	TCGA-FV-A2QR-01	Surgical Resection	United States	Yes		No	0	85	118	Cryovial	No
+TCGA-FV-A3I0	0		Sample Acquisition	TCGA-FV-A3I0-01	Surgical Resection	United States	Yes		No	10	70	230	Cryovial	No
+TCGA-FV-A3I1	0		Sample Acquisition	TCGA-FV-A3I1-01	Surgical Resection	United States	Yes		No	0	80	106	Cryovial	No
+TCGA-FV-A3R2	0		Sample Acquisition	TCGA-FV-A3R2-01	Surgical Resection	United States	Yes		No	0	90	157	Cryovial	No
+TCGA-FV-A3R3	0		Sample Acquisition	TCGA-FV-A3R3-01	Surgical Resection	United States	Yes		No	0	80	91	Cryovial	
+TCGA-FV-A4ZP	0		Sample Acquisition	TCGA-FV-A4ZP-01	Surgical Resection	United States	Yes		No	12	75	209	Cryovial	No
+TCGA-FV-A4ZQ	0		Sample Acquisition	TCGA-FV-A4ZQ-01	Surgical Resection	United States	Yes		No	0	80	171	Cryovial	
+TCGA-FV-A23B	0		Sample Acquisition	TCGA-FV-A23B-01	Surgical Resection	United States	Yes		No	10	95	100	Cryovial	
+TCGA-FV-A495	0		Sample Acquisition	TCGA-FV-A495-01		United States	Yes	No		0	90	68	Cryovial	
+TCGA-FV-A496	0		Sample Acquisition	TCGA-FV-A496-01	Surgical Resection	United States	Yes	No		0	90	69	Cryovial	
+TCGA-G3-A3CH	0		Sample Acquisition	TCGA-G3-A3CH-01	Surgical Resection	Canada	Yes		Yes	0	97	336	Cryomold	No
+TCGA-G3-A3CI	0		Sample Acquisition	TCGA-G3-A3CI-01	Surgical Resection	Canada	Yes		Yes	0	99	450	Cryomold	No
+TCGA-G3-A3CJ	0		Sample Acquisition	TCGA-G3-A3CJ-01	Surgical Resection	Canada	Yes		Yes	0	99	280	Cryomold	No
+TCGA-G3-A3CK	0		Sample Acquisition	TCGA-G3-A3CK-01	Surgical Resection	Canada	Yes		Yes	0	98	64	Cryomold	No
+TCGA-G3-A5SI	0		Sample Acquisition	TCGA-G3-A5SI-01	Surgical Resection	Canada	Yes	No		0	60	120	Cryomold	
+TCGA-G3-A5SJ	0		Sample Acquisition	TCGA-G3-A5SJ-01	Surgical Resection	Canada	Yes	No		0	99	200	Cryomold	
+TCGA-G3-A5SK	0		Sample Acquisition	TCGA-G3-A5SK-01	Surgical Resection	Canada	Yes	No		0	100	150	Cryomold	
+TCGA-G3-A5SL	0		Sample Acquisition	TCGA-G3-A5SL-01	Surgical Resection	Canada	Yes	No		0	100	150	Cryomold	
+TCGA-G3-A5SM	0		Sample Acquisition	TCGA-G3-A5SM-01	Surgical Resection	Canada	Yes	No		0	95	200	Cryomold	
+TCGA-G3-A6UC	0		Sample Acquisition	TCGA-G3-A6UC-01	Surgical Resection	Canada	Yes	No		0	100	200	Cryomold	
+TCGA-G3-A7M5	0		Sample Acquisition	TCGA-G3-A7M5-01	Surgical Resection	Canada	Yes	No		0	100	200	Cryomold	
+TCGA-G3-A7M6	0		Sample Acquisition	TCGA-G3-A7M6-01	Surgical Resection	Canada	Yes	No		20	80	150	Cryomold	
+TCGA-G3-A7M7	0		Sample Acquisition	TCGA-G3-A7M7-01	Surgical Resection	Canada	Yes	No		0	100	200	Cryomold	
+TCGA-G3-A7M8	0		Sample Acquisition	TCGA-G3-A7M8-01	Surgical Resection	Canada	Yes	No		0	100	200	Cryomold	
+TCGA-G3-A7M9	0		Sample Acquisition	TCGA-G3-A7M9-01	Surgical Resection	Canada	Yes	Yes		30	70	300	Cryomold	
+TCGA-G3-A25S	0		Sample Acquisition	TCGA-G3-A25S-01	Surgical Resection	Canada	Yes		Yes	0	97	300	Cryomold	No
+TCGA-G3-A25T	0		Sample Acquisition	TCGA-G3-A25T-01	Surgical Resection	Canada	Yes		Yes	0	80	144	Cryomold	No
+TCGA-G3-A25U	0		Sample Acquisition	TCGA-G3-A25U-01	Surgical Resection	Canada	Yes		Yes	0	99	1080	Cryomold	No
+TCGA-G3-A25V	0		Sample Acquisition	TCGA-G3-A25V-01	Surgical Resection	Canada	Yes		Yes	0	85	160	Cryovial	No
+TCGA-G3-A25W	0		Sample Acquisition	TCGA-G3-A25W-01	Surgical Resection	Canada	Yes		Yes	0	80	320	Cryomold	No
+TCGA-G3-A25X	0		Sample Acquisition	TCGA-G3-A25X-01	Surgical Resection	Canada	Yes		Yes	0	86	144	Cryomold	No
+TCGA-G3-A25Y	0		Sample Acquisition	TCGA-G3-A25Y-01	Surgical Resection	Canada	Yes		Yes	0	87	1400	Cryomold	No
+TCGA-G3-A25Z	0		Sample Acquisition	TCGA-G3-A25Z-01	Surgical Resection	Canada	Yes		Yes	0	90	600	Cryomold	No
+TCGA-G3-AAUZ	0		Sample Acquisition	TCGA-G3-AAUZ-01	Surgical Resection	Canada	Yes	Yes		0	100	150	Cryomold	
+TCGA-G3-AAV0	0		Sample Acquisition	TCGA-G3-AAV0-01	Surgical Resection	Canada	Yes	Yes		0	100	225	Cryomold	
+TCGA-G3-AAV1	0		Sample Acquisition	TCGA-G3-AAV1-01	Surgical Resection	Canada	Yes	Yes		0	100	250	Cryomold	
+TCGA-G3-AAV2	0		Sample Acquisition	TCGA-G3-AAV2-01	Surgical Resection	Canada	Yes	Yes		0	100	150	Cryomold	
+TCGA-G3-AAV3	0		Sample Acquisition	TCGA-G3-AAV3-01	Surgical Resection	Canada	Yes	Yes		0	100	150	Cryomold	
+TCGA-G3-AAV4	0		Sample Acquisition	TCGA-G3-AAV4-01	Surgical Resection	Canada	Yes	Yes		0	100	200	Cryomold	
+TCGA-G3-AAV5	0		Sample Acquisition	TCGA-G3-AAV5-01	Surgical Resection	Canada	Yes	Yes		5	95	150	Cryomold	
+TCGA-G3-AAV6	0		Sample Acquisition	TCGA-G3-AAV6-01	Surgical Resection	Canada	Yes	Yes		20	80	150	Cryomold	
+TCGA-G3-AAV7	0		Sample Acquisition	TCGA-G3-AAV7-01	Surgical Resection	Canada	Yes	Yes		29	70	150	Cryomold	
+TCGA-GJ-A3OU	0		Sample Acquisition	TCGA-GJ-A3OU-01	Surgical Resection	United States	Yes		Yes	0	65	170	Cryovial	Yes
+TCGA-GJ-A6C0	0		Sample Acquisition	TCGA-GJ-A6C0-01	Surgical Resection	United States	Yes	Yes		25	55	170	Cryovial	
+TCGA-GJ-A9DB	0		Sample Acquisition	TCGA-GJ-A9DB-01	Surgical Resection	United States	Yes	Yes		0	50	580	Cryovial	
+TCGA-HP-A5MZ	0		Sample Acquisition	TCGA-HP-A5MZ-01	Surgical Resection	Canada	Yes	No		9	60	250	Cryovial	
+TCGA-HP-A5N0	0		Sample Acquisition	TCGA-HP-A5N0-01	Surgical Resection	Canada	Yes	No		9	90	250	Cryovial	
+TCGA-K7-A5RF	0		Sample Acquisition	TCGA-K7-A5RF-01	Surgical Resection	United States	Yes	No		0	100	1559	50Ml Conical	
+TCGA-K7-A5RG	0		Sample Acquisition	TCGA-K7-A5RG-01	Surgical Resection	United States	Yes	No		0	90	727	50Ml Conical	
+TCGA-K7-A6G5	0		Sample Acquisition	TCGA-K7-A6G5-01	Surgical Resection	United States	Yes	No		0	90	140	Cassette	
+TCGA-K7-AAU7	0		Sample Acquisition	TCGA-K7-AAU7-01	Surgical Resection	United States	Yes	No		0	70	357	Cassette	
+TCGA-KR-A7K0	0		Sample Acquisition	TCGA-KR-A7K0-01	Surgical Resection	United States	Yes	No		0	70	110	Cryovial	
+TCGA-KR-A7K2	0		Sample Acquisition	TCGA-KR-A7K2-01	Surgical Resection	United States	Yes	No		0	80	84	Cryovial	
+TCGA-KR-A7K7	0		Sample Acquisition	TCGA-KR-A7K7-01	Surgical Resection	United States	Yes	No		0	90	143	Cryovial	
+TCGA-KR-A7K8	0		Sample Acquisition	TCGA-KR-A7K8-01	Surgical Resection	United States	Yes	No		0	90	78	Cryovial	
+TCGA-LG-A6GG	0		Sample Acquisition	TCGA-LG-A6GG-01	Surgical Resection	United States	Yes	No		0	100	1300	Other	
+TCGA-LG-A9QC	0		Sample Acquisition	TCGA-LG-A9QC-01	Surgical Resection	United States	Yes	No		0	90	1300	Other	
+TCGA-LG-A9QD	0		Sample Acquisition	TCGA-LG-A9QD-01	Surgical Resection	United States	Yes	No		0	100	960	Other	
+TCGA-MI-A75C	0		Sample Acquisition	TCGA-MI-A75C-01	Surgical Resection	United States	Yes	No		0	90	42	Cryomold	
+TCGA-MI-A75E	0		Sample Acquisition	TCGA-MI-A75E-01	Surgical Resection	United States	Yes	No		0	60	83	Cryomold	
+TCGA-MI-A75G	0		Sample Acquisition	TCGA-MI-A75G-01	Surgical Resection	United States	Yes	No		0	95	83	Cryomold	
+TCGA-MI-A75H	0		Sample Acquisition	TCGA-MI-A75H-01	Surgical Resection	United States	Yes	No		0	90	72	Cryomold	
+TCGA-MI-A75I	0		Sample Acquisition	TCGA-MI-A75I-01	Surgical Resection	United States	Yes	No		0	90	65	Cryomold	
+TCGA-MR-A8JO	0		Sample Acquisition	TCGA-MR-A8JO-01	Surgical Resection	United States	Yes	No		0	95	440	Cryomold	
+TCGA-MR-A520	0		Sample Acquisition	TCGA-MR-A520-01	Surgical Resection	United States	Yes	No		0	90	580	Cryomold	
+TCGA-NI-A4U2	0		Sample Acquisition	TCGA-NI-A4U2-01	Surgical Resection	United States	Yes	No		0	90	520	Cryovial	
+TCGA-NI-A8LF	0		Sample Acquisition	TCGA-NI-A8LF-01	Surgical Resection	United States	Yes	No		0	80	250	Cryovial	
+TCGA-O8-A75V	0		Sample Acquisition	TCGA-O8-A75V-01	Surgical Resection	United States	Yes	No		0	80	390	Cryovial	
+TCGA-PD-A5DF	0		Sample Acquisition	TCGA-PD-A5DF-01	Surgical Resection	United States	Yes	No		15	60	200	Cryovial	
+TCGA-QA-A7B7	0		Sample Acquisition	TCGA-QA-A7B7-01	Surgical Resection	United States	Yes	No		0	90	100	Cryomold	
+TCGA-RC-A6M3	0		Sample Acquisition	TCGA-RC-A6M3-01	Surgical Resection	United States	Yes	No		0	80	2062	Cryovial	
+TCGA-RC-A6M4	0		Sample Acquisition	TCGA-RC-A6M4-01	Surgical Resection	United States	Yes	No		0	90	1370	Cryovial	
+TCGA-RC-A6M5	0		Sample Acquisition	TCGA-RC-A6M5-01	Surgical Resection	United States	Yes	No		0	70	1098	Cryovial	
+TCGA-RC-A6M6	0		Sample Acquisition	TCGA-RC-A6M6-01	Surgical Resection	United States	Yes	No		0	90	985	Cryovial	
+TCGA-RC-A7S9	0		Sample Acquisition	TCGA-RC-A7S9-01	Surgical Resection	Korea South	Yes	No		0	80	20	Cryomold	
+TCGA-RC-A7SB	0		Sample Acquisition	TCGA-RC-A7SB-01	Surgical Resection	Korea South	Yes	Yes		0	50	20	Cryomold	
+TCGA-RC-A7SF	0		Sample Acquisition	TCGA-RC-A7SF-01	Surgical Resection	Korea South	Yes	No		0	80	20	Cryomold	
+TCGA-RC-A7SH	0		Sample Acquisition	TCGA-RC-A7SH-01	Surgical Resection	Korea South	Yes	Yes		0	50	20	Cryomold	
+TCGA-RC-A7SK	0		Sample Acquisition	TCGA-RC-A7SK-01	Surgical Resection	Korea South	Yes	No		0	80	20	Cryomold	
+TCGA-RG-A7D4	0		Sample Acquisition	TCGA-RG-A7D4-01	Surgical Resection	United States	Yes	No		0	90	100	Cryovial	
+TCGA-UB-A7MA	0		Sample Acquisition	TCGA-UB-A7MA-01	Surgical Resection	United States	Yes	No		5	90	125	Cryomold	
+TCGA-UB-A7MB	0		Sample Acquisition	TCGA-UB-A7MB-01	Surgical Resection	United States	Yes	No		0	95	125	Cryomold	
+TCGA-UB-A7MC	0		Sample Acquisition	TCGA-UB-A7MC-01	Surgical Resection	United States	Yes	No		5	95	125	Cryomold	
+TCGA-UB-A7MD	0		Sample Acquisition	TCGA-UB-A7MD-01	Surgical Resection	United States	Yes	No		20	80	125	Cryomold	
+TCGA-UB-A7ME	0		Sample Acquisition	TCGA-UB-A7ME-01	Surgical Resection	United States	Yes	No		5	80	125	Cryomold	
+TCGA-UB-A7MF	0		Sample Acquisition	TCGA-UB-A7MF-01	Surgical Resection	United States	Yes	No		5	90	125	Cryomold	
+TCGA-UB-AA0U	0		Sample Acquisition	TCGA-UB-AA0U-01	Surgical Resection	United States	Yes	No		0	60	125	Cryomold	
+TCGA-UB-AA0V	0		Sample Acquisition	TCGA-UB-AA0V-01	Surgical Resection	United States	Yes	No		0	60	125	Cryomold	
+TCGA-WJ-A86L	10		Sample Acquisition	TCGA-WJ-A86L-01	Surgical Resection	United States	Yes	No		0	75	280	Cryovial	
+TCGA-WQ-A9G7	0		Sample Acquisition	TCGA-WQ-A9G7-01	Surgical Resection	United States	Yes	No		5	60	200	Cryovial	
+TCGA-WQ-AB4B	0		Sample Acquisition	TCGA-WQ-AB4B-01	Surgical Resection	United States	Yes	No		5	80	93	Cryovial	
+TCGA-WX-AA44	-116		Sample Acquisition	TCGA-WX-AA44-01	Surgical Resection	United States	Yes	No		0	80	115	Cryovial	
+TCGA-WX-AA46	0		Sample Acquisition	TCGA-WX-AA46-01	Surgical Resection	United States	Yes	No		0	100	200	Cryovial	
+TCGA-WX-AA47	0		Sample Acquisition	TCGA-WX-AA47-01	Surgical Resection	United States	Yes	No		0	90	900	Cryovial	
+TCGA-XR-A8TD	0		Sample Acquisition	TCGA-XR-A8TD-01	Surgical Resection	Brazil	Yes	No		0	80	260	Cryovial	
+TCGA-XR-A8TE	0		Sample Acquisition	TCGA-XR-A8TE-01	Surgical Resection	Brazil	Yes	No		0	80	70	Cryovial	
+TCGA-XR-A8TF	0		Sample Acquisition	TCGA-XR-A8TF-01	Surgical Resection	Brazil	Yes	No		0	90	250	Cryovial	
+TCGA-XR-A8TG	0		Sample Acquisition	TCGA-XR-A8TG-01	Surgical Resection	Brazil	Yes	No		0	60	60	Cryovial	
+TCGA-YA-A8S7	0		Sample Acquisition	TCGA-YA-A8S7-01	Surgical Resection	United States	Yes	No		25	75	178	Cryovial	
+TCGA-ZP-A9CV	0		Sample Acquisition	TCGA-ZP-A9CV-01	Surgical Resection	United States	Yes	No		0	90	200	Cryovial	
+TCGA-ZP-A9CY	0		Sample Acquisition	TCGA-ZP-A9CY-01	Surgical Resection	United States	Yes	No		0	85	0200	Cryovial	
+TCGA-ZP-A9CZ	0		Sample Acquisition	TCGA-ZP-A9CZ-01	Surgical Resection	United States	Yes	No		0	60	0200	Cryovial	
+TCGA-ZP-A9D0	0		Sample Acquisition	TCGA-ZP-A9D0-01	Surgical Resection	United States	Yes	No		0	95	0400	Cryovial	
+TCGA-ZP-A9D1	0		Sample Acquisition	TCGA-ZP-A9D1-01	Surgical Resection	United States	Yes	No		2	75	400	Cryovial	
+TCGA-ZP-A9D2	0		Sample Acquisition	TCGA-ZP-A9D2-01	Surgical Resection	United States	Yes	No		2	65	200	Cryovial	
+TCGA-ZP-A9D4	0		Sample Acquisition	TCGA-ZP-A9D4-01	Surgical Resection	United States	Yes	No		0	80	200	Cryovial	
+TCGA-ZS-A9CD	0		Sample Acquisition	TCGA-ZS-A9CD-01	Surgical Resection	United Kingdom	Yes	No		0	85	50	Cryovial	
+TCGA-ZS-A9CE	0		Sample Acquisition	TCGA-ZS-A9CE-01	Surgical Resection	United Kingdom	Yes	No		0	90	50	Cryovial	
+TCGA-ZS-A9CF	0		Sample Acquisition	TCGA-ZS-A9CF-01	Surgical Resection	United Kingdom	No	No				50	Cryovial	
+TCGA-ZS-A9CG	0		Sample Acquisition	TCGA-ZS-A9CG-01	Surgical Resection	United Kingdom	Yes	No		0	90	50	Cryovial	

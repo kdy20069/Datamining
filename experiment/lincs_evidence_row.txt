@@ -1,0 +1,12 @@
+[LINCS Evidence Row]
+- Search Term: haloperidol
+- Signature ID: LINCSCP_22231
+- Context: HepG2 (Liver cancer cells), 10uM, 6h
+- Result: 9 genes UP, 5 genes DOWN (filtered by p < 0.01)
+- Pathway Analysis (Enrichr): Cholesterol Biosynthesis (Reactome 2024, Adj p = 7.9e-9)
+- Pathway term identifiers checked 2026-11-23: Reactome R-HSA-191273 / R-HSA-2426168, WikiPathways WP4190, GO:0006695.
+- Provenance limitation: Enrichr request payload, source gene-set library response, and original run date were not archived; the p-values are retained from the existing local record and were not independently rerun.
+
+[Inference Limits (데이터의 한계점)]
+1. 간세포(Liver cells)에서의 콜레스테롤 합성 증가 결과이므로, 뇌 신경독성(neurotoxicity)이나 뇌에 미치는 영향을 직접적으로 증명할 수 없습니다.
+2. 단일 약물(Single-drug) 시그니처이므로, 혼합 독성(mixture synergy)을 이 데이터만으로 주장할 수 없습니다.

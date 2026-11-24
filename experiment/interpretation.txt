@@ -1,0 +1,19 @@
+Data Mining Week 8-2: Chemical-First & Endpoint-First Integration Interpretation
+==============================================================================
+
+1. Connected Pair:
+   - Active / Assay Ingredient: Prallethrin (PubChem CID: 9839306)
+   - Additive / Metabolism Context: Permethrin (CTD Chemical ID: D026023)
+
+2. Shared GeneID Linkage:
+   - CYP2C19 (GeneID: 1557):
+     * Prallethrin BioAssay: AID 1671197 (Potency, Active, 4.99 uM), AID 2284395 (AC50, Active, 5.29 uM)
+     * CTD Permethrin Record: CYP2C19 increases permethrin metabolism (Homo sapiens, PMID: 24548679)
+   - CYP3A4 (GeneID: 1576):
+     * Prallethrin BioAssay: AID 1671201 (Potency, Active, 8.88 uM), AID 2283680/689/698 (Gene expression AC50), AID 2284096 (Reporter antagonist)
+     * CTD Permethrin Record: CYP3A4 increases permethrin metabolism (Homo sapiens, PMID: 24548679)
+
+3. Scientific Claim Limits & Gaps:
+   - An active assay call or shared GeneID link indicates a metabolic/reporter interaction potential.
+   - It does NOT automatically prove in vivo clearance inhibition or mixture synergy.
+   - Assay species in high-throughput screening may differ from human curated literature (Species context must be retained).
