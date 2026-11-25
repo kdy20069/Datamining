@@ -47,3 +47,7 @@ Place tables and figures FIRST in each section, followed by only 1–2 concise s
 
 ## 4. Iteration Rule
 - If the generated report has missing items, weak wording, or exceeds length budgets, do **not** hand-edit the report text; update this `SKILL.md` or the analysis scripts in `experiment/` and regenerate the report.
+
+## 5. Final Formatting & Reference Rules
+- **100% English ONLY:** Never include Korean text anywhere in the report, including inside the Reproducibility Metadata section. Keep the recorded execution prompt concise (1–2 English sentences inside the metadata table; do not paste long multi-paragraph prompt blocks).
+- **Dedicated References Section:** End the report with a clean `## References` section listing verified sources with IDs, URLs, and retrieval/check dates (following the repository template style).
