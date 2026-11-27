@@ -1,133 +1,121 @@
-# Evidence-Bounded Assessment of a Candidate Insecticide-Benzodiazepine Combination
+# Evidence-Bounded Integrated Audit of a Candidate Insecticide–Benzodiazepine Combination
 
-**Final report | 26 November 2026**
+**Final report | 27 November 2026**
 
-## 1. Databases used and extracted information
+## 1. Study Scope and Databases
 
-| Database / source | Question addressed | Locally retained IDs and scope | Check date and boundary |
+Three insecticides (Permethrin, Prallethrin, piperonyl butoxide / PBO) and two INCB Schedule IV benzodiazepines (Diazepam, Alprazolam) were selected for a shared-metabolism / GABA-A evidence screen because they combine widely used pyrethroid-active or synergist ingredients with two controlled CNS-acting benzodiazepines whose metabolism involves CYP2C19 and CYP3A4. The screening question is whether the retained local records support direct or network-level shared nodes between these five candidates.
+
+**Table 1.** Database coverage and retained record scope. Paths, URLs, and long identifier lists stay with the cited records or References; Table 1 reports scope and count only.
+
+| Database / Source | Evidence Scope | Retained Records | Retrieval / Provenance Date |
 |---|---|---|---|
-| PubChem BioAssay | What prallethrin assay records target CYP enzymes? | CID 9839306; AIDs 1671197, 2284395, 1671201, 2283680, 2283689, 2283698, 2284096; CYP2C19 GeneID 1557 and CYP3A4 GeneID 1576 | Locators reviewed 2026-11-23; assay species recorded as Unknown |
-| CTD / PubMed | What chemical-gene metabolism and neurotoxicity-gene entries are retained? | Permethrin D026023; CYP2C19 1557 and CYP3A4 1576; PMID 24548679; 33 neurotoxicity-gene rows with Gene IDs, PMIDs and URLs | Locators reviewed 2026-11-23; CTD original query/date not retained |
-| STRING v12.5 | What CYP3A4-POR association is recorded? | CYP3A4 `9606.ENSP00000498939`; POR `9606.ENSP00000419970`; combined 0.979, physical 0.597 | Checked 2026-11-06; functional association does not establish physical binding |
-| KEGG / Reactome r98 | What CYP3A4 pathway and reaction context is retained? | hsa:1576 / hsa00980; R-HSA-211948; ingredient IDs C18510 (prallethrin), C18880 (PBO) | Checked 2026-11-06; ingredient pathway/reaction gaps are coverage gaps |
-| ClinPGx / gnomAD v4 | What CYP3A4 pharmacogenomic context is recorded? | PA130; rs35599367 / CYP3A4\*22; Level 1A quetiapine pharmacokinetic annotation; AF 3.172% overall and 0.000% East Asian | Checked 2026-11-06; population frequency is not personal risk |
-| ClinicalTrials.gov | What is the scope of the retained PBO trial search? | 12 PBO-intervention study records: 11 malaria and 1 lice; example NCT02288637, malaria endpoints, n=3,840 | Checked 2026-11-06; no psychiatric/neurotoxicity endpoint in this local search scope; example has no results posted |
-| INCB Green List, 36th edition | Are nominated psychotropics listed as controlled substances? | Alprazolam PA 004 / CID 2118 and diazepam PD 006 / CID 3016; Schedule IV | Official 2025 list checked 2026-11-23 |
-| AOP-Wiki | What observed relationships form the seizure-pathway context? | AOP 10; KER 667, 684, 630; KE 64, 669, 682, 616; AO 613 | Checked 2026-11-22/23; nominated chemicals are not registered AOP 10 stressors |
-| GEO / LINCS / cBioPortal TCGA-LIHC | What local MDD, perturbation, and tumor-context artifacts exist? | GSE208338 / GPL5188 / PMID 40253403; LINCSCP_22231; `lihc_tcga_pan_can_atlas_2018` | Source scope is retained; see Sections 4.1 and 4.2 for analysis limitations |
+| CTD (chemical–gene) | Permethrin CYP interaction direction; neurotoxicity gene set | Permethrin D026023 → CYP2C19 (1557) and CYP3A4 (1576), PMID 24548679 direction; 33 neurotoxicity-gene rows (MeSH `MESH:D020258`) | Local extract (original query date unrecorded) for the 33-gene file; Permethrin PMID-linked local extract; live CTD recheck attempted 2026-11-27 and failed / no parseable disease-gene result |
+| PubChem BioAssay | Prallethrin CYP bioassay activity | 7 unique AIDs for Prallethrin–CYP2C19/CYP3A4 (see `data/pubchem_aids.csv`) | PUG-REST assay-summary check 2026-11-27 (all seven returned one summary record); original AIDs are local extracts with retrieval date “Local extract (original query date unrecorded)” |
+| ChEMBL | CYP3A4 activity-record availability for PBO and ingredients | PBO / CHEMBL1201131 × CYP3A4 / CHEMBL340 activity records; ingredient–target availability snapshot | 2026-11-27 (activity API log and UniProt/available-target snapshot); archived PBO JSON mtime 2026-09-09 is an artifact timestamp, not a server retrieval timestamp |
+| UniProt | Target protein identifiers for the fixed target set | One UniProt lookup per fixed target in the expanded evidence run | 2026-11-27 |
+| Ensembl / 1000 Genomes | Population allele frequencies for CYP2C19 and CYP3A4 variants | CYP2C19 `CYP2C19*2`, `CYP2C19*3`, `CYP2C19*17` and CYP3A4 `CYP3A4*22` phase-3 frequencies; EAS vs Global where returned | 2026-11-27 (Ensembl variation `pops=1` responses; `CYP3A4*22` EAS is N/R (1000G)) |
+| Open Targets | Candidate-target psychiatric disease associations; direct CYP/POR disease lookups | 18 observed GABA-A gene–disease pairs across MDD (`MONDO_0002009`), schizophrenia (`MONDO_0005090`), anxiety disorder (`MONDO_0005618`); CYP3A4 802, CYP2C19 536, POR 540 associated-disease records across pages 0 and 1 | 2026-11-27 (GraphQL first 500 associated targets per disease/direct target query) |
+| KEGG Drug | Diazepam / Alprazolam metabolism and target annotations | dr:D00293, dr:D00225 TARGET/METABOLISM fields | 2026-11-27 |
+| PMID literature | Permethrin metabolism direction anchor | PMID 24548679 | 2026-11-27 |
+| STRING | CYP3A4–POR network-neighbor context | CYP3A4–POR combined score 0.979; POR shown only as an inferred shared node | checked 2026-11-06 |
+| AOP-Wiki | AOP 10 key events and adjacent key-event relationships | AOP 10; KE 64 (AO 613 pathway), KE 669, KE 682, KE 616, AO 613; KE669→KE682 KER continuity unreported in retained records | checked 2026-11-22 / 2026-11-23 |
+| INCB Green List, 36th edition | Controlled-substance schedule confirmation | Alprazolam PA 004; Diazepam PD 006, Schedule IV | checked 2026-11-23 |
+| ClinicalTrials.gov | Background PBO trial scope (background only) | 12 PBO-intervention records in local search scope (11 malaria, 1 lice); no psychiatric/neurotoxicity endpoint in that scope | checked 2026-11-06 |
+| GEO / PMID 40253403 | GSE208338 MDD candidate-panel and DEG inputs | GSE208338 / GPL5188 metadata present; retained DEG CSV has zero data rows | metadata checked 2026-11-23; DEG recompute inputs absent (expression matrix, sample metadata, DEG script) |
 
-**Table 1.** Source inventory and extracted scope. Provenance boundary: [`data/SOURCE_PROVENANCE.md`](../data/SOURCE_PROVENANCE.md) and [`experiment/evidence_table.csv`](../experiment/evidence_table.csv).
+ClinicalTrials.gov is retained only as background: the local PBO search returned malaria- and lice-oriented records, with no psychiatric/neurotoxicity endpoint in that scope. INCB is retained only to confirm that Alprazolam (PA 004) and Diazepam (PD 006) are Schedule IV substances under the verified 36th edition.
 
-The records come from distinct contexts and do not independently establish one shared mechanism. No human assay species is assigned where the local assay record says Unknown.
+## 2. Evidence Integration and Ranked Pair Matrix
 
-## 2. Cross-database integration method
+**Observed** means a curated database record, a verified bioassay record, or a peer-reviewed literature record with a verified PMID. **Inferred** means analyst synthesis, network-neighbor propagation, or an unverified pathway bridge; inferred nodes are not promoted to observed. Shared-node count is a screening heuristic.
 
-![CYP3A4-centered evidence network with observed and inferred links distinguished](../experiment/network_audit_plot.png)
+The ranked matrix comes from `experiment/pair_matrix_2x3.csv`, a 3-insecticide × 2-benzodiazepine table. Observed and inferred shared nodes are shown in separate columns, and the CSV’s `observed_rank` and `tie_break_order` fields are preserved. Generating script: `experiment/build_ranked_matrix.py`.
 
-**Figure 1.** Solid edges show recorded database relationships or context; dashed edges show analyst-inferred hypotheses. The directed AOP 10 KER sequence is observed pathway context, not a chemical-to-AOP connection. Generated by [`experiment/make_network_audit.py`](../experiment/make_network_audit.py) from [`experiment/evidence_table.csv`](../experiment/evidence_table.csv).
+| Rank | Insecticide | Benzodiazepine | Observed shared nodes (count) | Inferred shared nodes (count) | PMID-supported shared nodes | Bioassay-supported shared nodes |
+|---|---|---|---|---|---|---|
+| Joint Rank 1 / Tied 1 | Permethrin | Diazepam | `CYP2C19`; `CYP3A4` (2) | POR (1) | `CYP2C19`; `CYP3A4` | — |
+| Joint Rank 1 / Tied 1 | Prallethrin | Diazepam | `CYP2C19`; `CYP3A4` (2) | POR (1) | — | `CYP2C19`; `CYP3A4` |
+| Joint Rank 3 / Tied 3 | Permethrin | Alprazolam | `CYP3A4` (1) | POR (1) | `CYP3A4` | — |
+| Joint Rank 3 / Tied 3 | PBO | Alprazolam | `CYP3A4` (1) | POR (1) | — | `CYP3A4` |
+| Joint Rank 3 / Tied 3 | PBO | Diazepam | `CYP3A4` (1) | `CYP2C19`; POR (2) | — | `CYP3A4` |
+| Joint Rank 3 / Tied 3 | Prallethrin | Alprazolam | `CYP3A4` (1) | POR (1) | — | `CYP3A4` |
 
-| Join key | Linked records | Boundary |
-|---|---|---|
-| NCBI GeneID | Prallethrin assay and CTD Permethrin metabolism rows are associated through GeneIDs 1557 (CYP2C19) and 1576 (CYP3A4) | Cross-dataset association; does not show prallethrin changes permethrin metabolism |
-| STRING protein IDs | CYP3A4 `9606.ENSP00000498939` and POR `9606.ENSP00000419970` | Functional score 0.979; physical score 0.597, below the 0.700 cutoff |
-| KEGG / Reactome IDs | CYP3A4 `hsa:1576` in hsa00980; catalyst in R-HSA-211948 | Example map/reaction concerns other substrates; no curated prallethrin/PBO link in the retained audit |
-| AOP event IDs | KER 667: KE 64→669; KER 684: KE 682→616; KER 630: KE 616→AO 613 | Observed AOP relationships; no nominated chemical is a registered AOP 10 stressor |
+**Table 2.** Ranked insecticide–benzodiazepine shared-node matrix from `experiment/pair_matrix_2x3.csv`. Ranks are driven by observed_shared_count desc, then PMID-supported shared nodes desc, then bioassay-supported shared nodes desc; ties are preserved as `Joint Rank 1 / Tied 1` and `Joint Rank 3 / Tied 3`. The ordering preference for PMID support before bioassay support is an analyst-defined tie-break, not an additional observed measurement.
 
-**Table 2.** Identifier joins and their interpretation limits. Species and conditions follow the source rows; unknown assay species remain unknown.
+**Permethrin × Diazepam** and **Prallethrin × Diazepam** are both Joint Rank 1 (Tied 1), each with two observed shared nodes: `CYP2C19` and `CYP3A4`. Permethrin × Diazepam carries the PMID-supported pair, because CTD (PMID 24548679) records CYP3A4 and CYP2C19 as increasing Permethrin metabolism, a substrate/metabolism relationship rather than induction or inhibition, and KEGG Drug METABOLISM for Diazepam (dr:D00293) lists both enzymes. Prallethrin × Diazepam carries the bioassay-supported pair from `data/pubchem_aids.csv`; the retained assay species is recorded as Unknown in the source table. The matrix therefore places Permethrin × Diazepam first only under the analyst-defined tie-break that prefers PMID support before bioassay support; this is a display/ordering convention inside the tied group, not an extra observed measurement.
 
-## 3. Candidate combination and shared-node interaction screen
+**Hypothesis paragraph (explicitly labeled).** If Permethrin and Prallethrin share CYP2C19 and CYP3A4 substrate routes, concurrent exposure could create metabolic competition and alter clearance of one or both insecticides and of a co-administered benzodiazepine. That framing is an analyst hypothesis built on the retained substrate/metabolism and bioassay records; it is not an established interaction claim. Retained in-vitro assay records, including Prallethrin records with species listed as Unknown, do not establish substrate competition, inhibition, or synergy at relevant human exposure levels.
 
-**Table 3** below uses `experiment/evidence_table.csv` as its sole source. Observed shared nodes and inferred shared nodes are reported in separate columns. The course screening rule is that a pair connected to more shared nodes is considered more likely to interact. The databases contain no mixture response data, so Bliss independence, additivity, synergy, and antagonism cannot be classified from the retained records.
+**Shared-node-count limitation and PBO alternative.** Shared-node count ignores direction (substrate versus inhibitor), so PBO—despite CYP3A4 activity/inhibition assay signals—falls in the tied Joint Rank 3 group rather than above the tied Rank 1 pairs. Mechanistically, PBO × benzodiazepine is an alternative candidate for follow-up because PBO is discussed as a CYP3A4 modulator in the retained ChEMBL activity rows.
 
-| Candidate pair | Observed shared nodes | Inferred shared nodes | Evidence-table basis and interpretation |
-|---|---|---:|---|
-| Prallethrin + alprazolam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | INFERRED_01 + INFERRED_02; cross-dataset / PK hypothesis only; prallethrin-to-CYP3A4 assay link is in the inferred row, not a curated DB record |
-| Prallethrin + diazepam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | INFERRED_01 + INFERRED_02; diazepam-specific metabolism link is not independently documented in these rows |
-| Permethrin + alprazolam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | INFERRED_02; CTD source statement for permethrin (CYP3A4 increases its metabolism) and PK hypothesis do not establish a mixture effect |
-| Permethrin + diazepam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | INFERRED_02; diazepam-specific link is not independently documented |
-| PBO + alprazolam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | INFERRED_01 includes PBO in an aggregate hypothesis row; no direct PBO-to-CYP3A4 link is recorded there as a curated DB entry |
-| PBO + diazepam | **0 (evidence gap)** | 1: CYP3A4 / NCBI 1576 | Aggregate hypothesis only; no direct PBO or diazepam-to-CYP3A4 pair evidence exists in the retained DB rows |
+The mixed PBO–CYP3A4 calls must be reported as separate retained records, not collapsed into one active claim: the 501.2 nM Potency endpoint has one Active and one Not Active record, and two 3000 nM IC50 records are also retained. These are retained ChEMBL activity records; they support the presence of a recorded enzyme-assay signal for PBO at CYP3A4 but do not establish a single potency value or an in-vivo interaction.
 
-**Table 3.** Candidate-pair shared-node counts, separated by observed versus inferred evidence. Counts are calculated from source/link classes in `experiment/evidence_table.csv`: observed links to CYP3A4 for the candidate ingredient-psychotropic pairs are absent, while the inferred node derives from hypothesis rows INFERRED_01 and INFERRED_02. These rows aggregate chemicals, so the inferred count is a hypothesis-screen value rather than independent compound-specific confirmation.
+Where POR appears in the matrix, it is an inferred STRING CYP3A4–POR network-neighbor relationship (combined score 0.979), not direct compound–POR evidence, and it should be read as an inferred shared node only.
 
-The CYP3A4 overlap identifies a follow-up hypothesis, but the candidate pairs tie on the inferred screen and have zero observed shared nodes. The retained records therefore do not support ranking one pair above another. The databases do not contain mixture response data; Bliss independence, additive, synergistic, and antagonistic classifications cannot be determined.
+## 3. Integrated Mechanism and AOP Context
 
-## 4. External evidence, bonus analyses, and process audit
+![Integrated evidence network distinguishing observed solid links from inferred or unreported dashed links](../experiment/fig1_integrated_network.png)
 
-### 4.1 Bonus 1 — Psychiatric disease association
+**Figure 1.** Integrated CYP / GABA-A evidence network. Solid links are observed records; dashed links are inferred or unreported bridges. Generated by `experiment/build_evidence_figures.py` from the retained evidence boundary (`experiment/evidence_table.csv`).
 
-| Evidence item | Local observation | Completion status / limit |
-|---|---|---|
-| GEO GSE208338 | Series metadata identifies postmortem human DLPFC; MDD n=24, controls n=62; GPL5188; PMID 40253403 | Metadata scope only; local candidate-panel statistics lack the original expression matrix and analysis script |
-| MDD DEG file | `GSE208338_MDD_vs_Control_DEGs_log2FC_gt1_FDR_lt0.05.csv` has **0 data rows** | **Not performed / No quantifiable DEG overlap (0 data rows in repository)**; no overlap number is inferred |
-| LINCS `LINCSCP_22231` | Local HepG2 haloperidol signature, 10 µM / 6 h; 9 positive and 5 negative values in the local signature table | Single-agent liver-cell context; not evidence of a psychiatric disease association or brain effect |
-| CTD neurotoxicity/disease-gene table | 33 retained gene rows for MeSH `MESH:D020258` (Neurotoxicity Syndromes), with Gene IDs and PMIDs | Neurotoxicity gene context; no quantifiable overlap with the empty MDD DEG file |
-| ClinicalTrials.gov PBO scope | 12 local search results: 11 malaria and 1 lice; **0 psychiatric or neurotoxicity endpoints** in this result set | Search-scope finding only; NCT02288637 studies malaria endpoints and has no posted results |
+Figure 1 keeps observed and inferred relationships visually distinct, and missing data are visibly missing rather than drawn as observed links. The AOP 10 chain is anchored by KE 64 and AO 613 and includes adjacent key events and key-event relationships from `experiment/evidence_table.csv`; the KE669→KE682 continuity is not supported as an observed KER in the retained records and is treated as unreported rather than observed.
 
-**Table 4.** Psychiatric-disease association evidence and explicit completion status. Source fields and limitations are catalogued in [`data/SOURCE_PROVENANCE.md`](../data/SOURCE_PROVENANCE.md), [`experiment/clinpgx_clinicaltrials_evidence.txt`](../experiment/clinpgx_clinicaltrials_evidence.txt), and the local CTD table (`data/ctd_neurotoxicity_genes.csv`).
+## 4. Bonus 1: Psychiatric Disease Association
 
-![Haloperidol LINCS signature in HepG2 cells](../experiment/haloperidol_lincs_plot.png)
+![Neurotoxicity gene set versus candidate target genes, and Open Targets psychiatric association overview](../experiment/fig2_neuro_psych_overlap.png)
 
-**Figure 2.** Local LINCSCP_22231 single-agent signature; generated from [`experiment/haloperidol_signature.csv`](../experiment/haloperidol_signature.csv) by [`experiment/plot_lincs.py`](../experiment/plot_lincs.py). It provides the required perturbation context only; the MDD overlap analysis was not performed because the DEG file is empty.
+**Figure 2.** Psychiatric disease evidence overview. Generated by `experiment/build_evidence_figures.py` from `data/psychiatric_disease_evidence.csv`, `data/psychiatric_cyp_check.csv`, and `experiment/gene_overlap_summary.csv`.
 
-No psychiatric-disease association with the candidate mixture is established by the retained data. The table and figure complete the audit of available evidence and make the missing DEG result explicit without adding a substitute statistic. Psychiatric-disease context (GSE208338, MDD) is distinct from neurotoxicity evidence (CTD MeSH:D020258 genes) and from liver-cell perturbation results (LINCS, HepG2).
+The exact-symbol intersection between the 33-gene CTD neurotoxicity local extract (MeSH `MESH:D020258`) and the nine candidate target symbols is **0/9**, per `experiment/gene_overlap_summary.csv`. This is a local-extract intersection, not a live CTD result; the 33-gene set remains `Local extract (original query date unrecorded)`, and the live CTD recheck on 2026-11-27 did not yield a parseable disease-gene result.
 
-### 4.2 Bonus 2 — Individual side-effect differences
+Open Targets returned **18 observed GABA-A gene–disease pairs** across MDD (`MONDO_0002009`), schizophrenia (`MONDO_0005090`), and anxiety disorder (`MONDO_0005618`). The six GABA-A targets are GABRA1, GABRA2, GABRA3, GABRA5, GABRB2, and GABRG2. The main pattern is that MDD and anxiety disorder scores cluster near 0.61, while schizophrenia scores are lower; in prose, GABRA1’s comparatively higher MDD score reflects the returned genetic-association / GWAS credible-set component, and the similar MDD/anxiety totals coincide with a shared, near-saturated `clinical_precedence` component (~0.995–0.997). No `known_drug` component appeared in the 18 returned component arrays. The complete score inventory stays in `data/psychiatric_disease_evidence.csv`; the plotted values are not repeated here as bullets.
 
-| Comparison source | Locally recorded item | Observed scope | Inference limit |
-|---|---|---|---|
-| ClinPGx / gnomAD v4 | CYP3A4 PA130; rs35599367 / CYP3A4\*22; Level 1A quetiapine pharmacokinetic annotation; allele frequency 3.172% overall and 0.000% East Asian | Population-level variant and drug-PK annotation | **Population frequency ≠ individual risk; PK ≠ neurotoxicity** |
-| ClinPGx ingredient coverage | Prallethrin: no curated result; PBO: 0 curated annotations (literature hits only) | Database coverage status | **No annotation ≠ no risk** |
-| TCGA-LIHC PanCancer Atlas | CYP3A4 paired mRNA/CNA data: n=361 complete pairs of 372; broad mRNA spread is visible within the diploid group | Historical liver-tumor cohort; figure includes the diploid group | **Tumor mRNA ≠ neurotoxicity or personal side-effect risk** |
+Direct CYP/POR Open Targets lookups were run separately with disease IDs and names kept distinct, and cited from `data/psychiatric_cyp_check.csv`. Verified examples include CYP3A4 MDD 0.02670, epilepsy 0.02119, and neurotoxicity (`EFO_0011057`) 0.00776; CYP2C19 MDD 0.09820 and epilepsy 0.04821; the 0.00148 CYP2C19 result is **focal impaired awareness seizure** (`HP_0002384`), not the generic seizure row (0.02870). POR MDD is 0.00776 and epilepsy 0.00277; POR also has a broad anxiety record (`MONDO_0011918`, 0.00294), while the exact anxiety-disorder ID (`MONDO_0005618`) was not returned. These are retained Open Targets association records.
 
-**Table 5.** Pharmacogenomic annotation and tumor expression comparison. The recorded frequency and scope are transcribed from [`experiment/evidence_table.csv`](../experiment/evidence_table.csv); ClinPGx search limits are in [`experiment/clinpgx_clinicaltrials_evidence.txt`](../experiment/clinpgx_clinicaltrials_evidence.txt).
+The complete direct disease lists contained 802 CYP3A4, 536 CYP2C19, and 540 POR associated-disease records across pages 0 and 1. None of the three complete lists contained exact MeSH `MESH:D020258`; CYP2C19 and POR also had no neurotoxicity-named record in their complete lists. This is reported as no matching Open Targets record in the complete returned lists, not as biological absence.
 
-![CYP3A4 mRNA distribution by copy-number group in TCGA-LIHC](../experiment/tcga_cyp3a4_plot.png)
+The GSE208338 DEG audit is a single-input gap: the retained DEG CSV has zero data rows, and the expression matrix, sample metadata, and DEG script are absent, so the DEG overlap cannot be recomputed from this repository.
 
-**Figure 3.** CYP3A4 paired mRNA/CNA distribution for 361 local TCGA-LIHC samples, including diploid samples. Generated by [`experiment/plot_tcga_cyp3a4.py`](../experiment/plot_tcga_cyp3a4.py) from the retained `experiment/lihc_tcga_pan_can_atlas_2018/` cohort files.
+## 5. Bonus 2: Pharmacogenomic Population Frequencies
 
-These records describe population annotation and tumor expression, not observed differences in people's side effects. No personal probability or genotype-specific neurotoxicity conclusion is inferred. The gnomAD v4 frequency is a population statistic, not a personal genotype; quetiapine PK context is not a prallethrin/PBO or benzodiazepine interaction result; and TCGA-LIHC tumor mRNA is not a measure of neurotoxicity.
+![Population allele-frequency differences for CYP2C19 and CYP3A4 variants](../experiment/fig3_pgx_population_diff.png)
 
-### 4.3 External authoritative sources and process audit
+**Figure 3.** CYP2C19 and CYP3A4 population allele frequencies from Ensembl / 1000 Genomes phase 3. Generated by `experiment/build_evidence_figures.py` from `data/pgx_cyp2c19_cyp3a4.csv`.
 
-| Attempt / source | Issue or supported result | Lesson / improvement applied |
-|---|---|---|
-| PubChem assay + CTD metabolism (PMID 24548679) | Shared GeneIDs connect prallethrin assay records and permethrin metabolism statements; assay species is Unknown | Preserve assay scope; do not convert a cross-dataset link into in-vivo inhibition |
-| INCB Green List, 36th edition (2025) | Alprazolam PA 004 and diazepam PD 006 are listed in Schedule IV | Use current retained official edition and record identifiers |
-| GSE208338 DEG extraction | Local DEG CSV has zero data rows; derived candidate statistics are not independently reproducible locally | Mark overlap as not performed; do not cite derived values as reproduced findings |
-| LINCS / Enrichr | Signature CSV and plot are local; original request/response and Enrichr payload/run date are absent | Report only the retained signature; exclude unrerun pathway p-values |
-| AOP pathway selection | Earlier AOP 564/AO 566 selection was replaced by AOP 10/AO 613; the former is a zebrafish larval development pathway | Keep the adult-brain seizure pathway as context and chemical link as inferred |
-| Figure build | Network, LINCS, and TCGA Python scripts regenerated the three figures; system Python lacked pandas, installed Miniconda Python succeeded | Include only script-confirmed figures |
-| ClinicalTrials.gov scope | PBO study results are 11 malaria and 1 lice; NCT02288637 has no posted results | Do not describe completed malaria studies as neurotoxicity results |
-| CTD/workbook provenance | CTD original query/date and the classroom workbook's external publisher/source are not retained | Exclude claims that would depend on missing acquisition provenance |
+The largest EAS frequency among the retained star alleles is `CYP2C19*2` at 31.25% versus 22.14% Global; `CYP2C19*17` shows the reverse population pattern, higher globally than in EAS; `CYP3A4*22` is 1.50% Global and **N/R (1000G)** for EAS. Each star-allele name is retained in inline code: `CYP2C19*2`, `CYP2C19*3`, `CYP2C19*17`, and `CYP3A4*22`. N/R is reported as missing population coverage, not converted to 0%.
 
-**Table 6.** External source summary and process audit. Additional source locators: CTD/PubMed PMID 24548679 ([PubMed](https://pubmed.ncbi.nlm.nih.gov/24548679/)); alprazolam pharmacokinetic context PMID 22159869 ([PubMed](https://pubmed.ncbi.nlm.nih.gov/22159869/)); INCB *Green List*, 36th edition, Schedule IV ([official PDF](https://www.incb.org/incb/uploads/documents/Psychotropics/forms/greenlist/2026/2510307E.pdf)); GEO GSE208338 ([GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208338)). Full local provenance is in `data/SOURCE_PROVENANCE.md` and `experiment/evidence_table.csv`.
+The Global `CYP3A4*22` value is attributed to the retained Ensembl variation API response (`rs35599367`, `pops=1`, retrieval 2026-11-27). The EAS population was not returned for that variant in the retained query. Diazepam metabolism is described only to the extent supported by the retained KEGG Drug record (dr:D00293 METABOLISM lists CYP2C19 and CYP3A4); population frequency differences are descriptive and do not set individual risk.
 
-## 5. Reproducibility metadata
+## 6. Limitations and Process Audit
+
+The four caveats below appear only once in this report, in this section: the ranking is not a clinical interaction prediction; no mixed-exposure empirical data are available and Bliss classification is unavailable; population frequency is not individual risk; Open Targets scores are not causal evidence. Section 2 includes the required hypothesis counterpoint without restating this list.
+
+Coverage gaps and unresolved items are recorded concisely. CTD live recheck failed on 2026-11-27, while its 33-row gene set remains `Local extract (original query date unrecorded)`. The GSE208338 DEG recomputation inputs are absent, so the DEG overlap is not reported from this repository. `CYP3A4*22` EAS is N/R (1000G) in the retained Ensembl query. The CTD neurotoxicity overlap is reported in Section 4 as 0/9 from the local extract; it is not omitted or treated as unreportable. PubChem AID pages required a browser verification challenge during the audit, but the seven unique AIDs were verified through PUG-REST on 2026-11-27 and all returned one assay summary record; the original assay values remain local extracts. Several legacy PNGs do not have matching generator scripts in the current `experiment/` set, so their generation path remains unresolved. The original classroom workbook external publisher/source is not retained, and the original CTD query date is not embedded in the local extract.
+
+## Reproducibility Metadata
 
 | Field | Value |
 |---|---|
-| Coding agent | OpenCode |
-| Model version | Solar Pro 4 |
-| Date | 2026-11-26 |
-| Figure scripts | `experiment/make_network_audit.py`; `experiment/plot_lincs.py`; `experiment/plot_tcga_cyp3a4.py` |
-| Figure-generation Python | Miniconda Python 3 (pandas, matplotlib) |
-| Execution prompt | Regenerate the 100% English final report from SKILL.md, SOURCE_PROVENANCE.md, evidence_table.csv, and three script-confirmed figures, then export to PDF. |
+| Coding environment / agent | OpenCode |
+| Model | Solar Pro 4 |
+| Report date | 2026-11-27 |
+| Ranking script | `experiment/build_ranked_matrix.py` |
+| Figure script | `experiment/build_evidence_figures.py` |
+| Prompt | Read ONLY skill/evidence-report/SKILL.md, data/SOURCE_PROVENANCE.md, data/ctd_direction_audit.csv, data/psychiatric_disease_evidence.csv, data/psychiatric_cyp_check.csv, data/pgx_cyp2c19_cyp3a4.csv, data/pubchem_aids.csv, experiment/pair_matrix_2x3.csv, and experiment/gene_overlap_summary.csv. Do NOT scan experiment/lihc_tcga_pan_can_atlas_2018/ or run any shell commands. Regenerate report/Final_Report.md strictly following the updated SKILL.md: remove the Section 5 process-history sentence ("previously copied from..."), place the four core caveats ONLY in Section 6 (do not repeat them in Sections 2, 4, or 5), use `data/expanded_db_evidence.csv` in References 5 and 8, and paste THIS EXACT PROMPT VERBATIM into the Reproducibility Metadata Prompt cell without paraphrasing. Do NOT convert to PDF yet. |
 
 ## References
 
-1. CTD / PubMed. Permethrin (D026023) increases CYP2C19 and CYP3A4 metabolism. PMID 24548679. https://pubmed.ncbi.nlm.nih.gov/24548679/. Checked 2026-11-23.
-2. PubChem BioAssay. Prallethrin CID 9839306. AIDs 1671197, 2284395, 1671201, 2283680, 2283689, 2283698, 2284096, 2284395. https://pubchem.ncbi.nlm.nih.gov/compound/9839306; individual AID locators in `experiment/evidence_table.csv`. Checked 2026-11-23.
-3. STRING v12.5. CYP3A4 `9606.ENSP00000498939` and POR `9606.ENSP00000419970`; combined score 0.979. https://string-db.org. Checked 2026-11-06.
-4. KEGG. hsa:1576 (CYP3A4) in hsa00980; ingredient IDs C18510, C18880. https://kegg.jp. Checked 2026-11-06.
-5. Reactome r98. R-HSA-211948 (CYP3A4 N-demethylates loperamide). https://reactome.org. Checked 2026-11-06.
-6. ClinPGx. CYP3A4 PA130; rs35599367 / CYP3A4\*22; Level 1A quetiapine PK annotation. https://clinpgx.org. Checked 2026-11-06.
-7. ClinicalTrials.gov. 12 PBO-intervention records; example NCT02288637. https://clinicaltrials.gov. Checked 2026-11-06.
-8. INCB. *Green List*, 36th edition (2025), Schedule IV, pp. 9–10. https://www.incb.org/incb/uploads/documents/Psychotropics/forms/greenlist/2026/2510307E.pdf. Checked 2026-11-23.
-9. AOP-Wiki. AOP 10; KER 667, 684, 630; AO 613. https://aopwiki.org/aops/10. Checked 2026-11-22/2026-11-23.
-10. GEO. GSE208338; GPL5188; PMID 40253403; DOI 10.1038/s41398-025-03366-8. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208338. Checked 2026-11-23.
-11. PubMed. Alprazolam 4-hydroxylation as CYP3A4 marker in hemodialysis patients. PMID 22159869; DOI 10.1007/s00228-011-1163-8. https://pubmed.ncbi.nlm.nih.gov/22159869/. Checked 2026-11-23.
-12. ChEMBL. PBO/CYP3A4 activity records: molecule CHEMBL1201131, target CHEMBL340. https://www.ebi.ac.uk/chembl/api/data/. Source artifact mtime 2026-09-09.
-13. CTD neurotoxicity genes. 33 rows, MeSH:D020258. Local file `data/ctd_neurotoxicity_genes.csv`. Checked 2026-11-23.
-14. LINCS. Signature LINCSCP_22231 (haloperidol, HepG2). Local file `experiment/haloperidol_signature.csv`.
-15. cBioPortal / TCGA PanCancer Atlas. LIHC (phs000178); CYP3A4 mRNA and CNA. https://www.cbioportal.org. Checked 2026-11-06.
+1. CTD / PubMed. CYP2C19 and CYP3A4 increase Permethrin metabolism (PMID 24548679). https://pubmed.ncbi.nlm.nih.gov/24548679/; [CTD chemical D026023](https://ctdbase.org/detail.go?type=chem&acc=D026023); [PubMed 24548679](https://pubmed.ncbi.nlm.nih.gov/24548679/). Local: `data/ctd_direction_audit.csv`. Permethrin direction from retained PMID-linked local extract; live CTD recheck attempted 2026-11-27 and failed / no parseable disease-gene result.
+2. CTD neurotoxicity gene set. 33 rows, MeSH `MESH:D020258`. https://ctdbase.org/detail.go?type=gene&acc=1557 (CYP2C19); https://ctdbase.org/detail.go?type=gene&acc=1576 (CYP3A4). Local: `data/ctd_neurotoxicity_genes.csv`. Local extract (original query date unrecorded).
+3. PubChem BioAssay. Prallethrin bioassay AIDs (7 unique AIDs: 1671197, 2284395, 1671201, 2283680, 2283689, 2283698, 2284096). https://pubchem.ncbi.nlm.nih.gov/docs/bioassays; per-AID locators in `data/pubchem_aids.csv`. PUG-REST assay-summary check 2026-11-27; all seven returned one summary record. Original AIDs are local extracts with retrieval date “Local extract (original query date unrecorded)”.
+4. ChEMBL. PBO / CHEMBL1201131 × CYP3A4 / CHEMBL340 activity records. https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1201131&target_chembl_id=CHEMBL340. Local: `data/expanded_db_evidence.csv`; `data/chembl_availability_data.json`. Retrieved 2026-11-27; archived PBO JSON mtime 2026-09-09 is an artifact timestamp, not a server retrieval timestamp.
+5. UniProt. Fixed-target protein entries used in the expanded evidence run. https://rest.uniprot.org/uniprotkb/. Retrieval 2026-11-27. Local: `data/expanded_db_evidence.csv`.
+6. Ensembl / 1000 Genomes phase 3. CYP2C19 rs4244285 (`CYP2C19*2`), rs4986893 (`CYP2C19*3`), rs12248560 (`CYP2C19*17`); CYP3A4 rs35599367 (`CYP3A4*22`). https://rest.ensembl.org/variation/human/rs4244285?pops=1; https://rest.ensembl.org/variation/human/rs4986893?pops=1; https://rest.ensembl.org/variation/human/rs12248560?pops=1; https://rest.ensembl.org/variation/human/rs35599367?pops=1. Retrieval 2026-11-27. Local: `data/pgx_cyp2c19_cyp3a4.csv`. `CYP3A4*22` EAS is N/R (1000G).
+7. Open Targets. MDD `MONDO_0002009`; schizophrenia `MONDO_0005090`; anxiety disorder `MONDO_0005618` associated targets; direct CYP3A4 `ENSG00000160868`, CYP2C19 `ENSG00000165841`, POR `ENSG00000127948` associated-disease lookups. https://api.platform.opentargets.org/api/v4/graphql. Retrieval 2026-11-27. Local: `data/psychiatric_disease_evidence.csv`; `data/psychiatric_cyp_check.csv`. Scores are association rankings, not causal evidence.
+8. KEGG Drug. Diazepam dr:D00293; Alprazolam dr:D00225. https://rest.kegg.jp/get/dr:D00293; https://rest.kegg.jp/get/dr:D00225. Retrieval 2026-11-27. Local: `data/expanded_db_evidence.csv`.
+9. STRING v12.5. CYP3A4–POR combined score 0.979. https://string-db.org/. Checked 2026-11-06. Local: `experiment/evidence_table.csv`. POR shown as an inferred STRING CYP3A4–POR network-neighbor relationship, not direct compound–POR evidence.
+10. AOP-Wiki. AOP 10; KE 64; AO 613; adjacent key events and key-event relationships. https://aopwiki.org/aops/10; https://aopwiki.org/events/64; https://aopwiki.org/events/613. Checked 2026-11-22 / 2026-11-23. Local: `experiment/evidence_table.csv`. KE669→KE682 KER continuity is unreported in retained records.
+11. INCB. *Green List*, 36th edition (2025), Schedule IV, Alprazolam PA 004; Diazepam PD 006. https://www.incb.org/incb/uploads/documents/Psychotropics/forms/greenlist/2026/2510307E.pdf. Checked 2026-11-23. Local: `experiment/evidence_table.csv`.
+12. ClinicalTrials.gov. PBO-intervention study scope (background only). https://clinicaltrials.gov. Checked 2026-11-06. Local: `experiment/clinpgx_clinicaltrials_evidence.txt`.
+13. GEO / PMID 40253403. GSE208338, GPL5188, postmortem human DLPFC, MDD n=24, controls n=62. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE208338; https://pubmed.ncbi.nlm.nih.gov/40253403/. Checked 2026-11-23. Local DEG file has zero data rows; DEG recompute inputs absent.

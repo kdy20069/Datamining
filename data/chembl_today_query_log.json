@@ -1,0 +1,52 @@
+{
+  "query_date": "2026-11-27",
+  "queries": [
+    {
+      "molecule_chembl_id": "CHEMBL1201131",
+      "molecule_name": "Piperonyl butoxide (PBO)",
+      "target_chembl_id": "CHEMBL340",
+      "target_pref_name": "Cytochrome P450 3A4",
+      "query": "molecule_chembl_id=CHEMBL1201131&target_chembl_id=CHEMBL340&limit=20",
+      "query_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1201131&target_chembl_id=CHEMBL340&limit=20",
+      "source_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1201131&target_chembl_id=CHEMBL340&limit=20",
+      "retrieval_date": "2026-11-27",
+      "query_date": "2026-11-27",
+      "http_status": "ok",
+      "record_count": 4,
+      "activity_ids": [
+        5001792,
+        5066653,
+        17706609,
+        17707405
+      ]
+    },
+    {
+      "molecule_chembl_id": "CHEMBL1525",
+      "molecule_name": "Permethrin",
+      "target_chembl_id": "CHEMBL340",
+      "target_pref_name": "Cytochrome P450 3A4",
+      "query": "molecule_chembl_id=CHEMBL1525&target_chembl_id=CHEMBL340&limit=20",
+      "query_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1525&target_chembl_id=CHEMBL340&limit=20",
+      "source_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1525&target_chembl_id=CHEMBL340&limit=20",
+      "retrieval_date": "2026-11-27",
+      "query_date": "2026-11-27",
+      "http_status": "ok",
+      "record_count": 0,
+      "activity_ids": []
+    },
+    {
+      "molecule_chembl_id": "CHEMBL1876311",
+      "molecule_name": "Prallethrin",
+      "target_chembl_id": "CHEMBL340",
+      "target_pref_name": "Cytochrome P450 3A4",
+      "query": "molecule_chembl_id=CHEMBL1876311&target_chembl_id=CHEMBL340&limit=20",
+      "query_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1876311&target_chembl_id=CHEMBL340&limit=20",
+      "source_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1876311&target_chembl_id=CHEMBL340&limit=20",
+      "retrieval_date": "2026-11-27",
+      "query_date": "2026-11-27",
+      "http_status": "ok",
+      "record_count": 0,
+      "activity_ids": []
+    }
+  ]
+}

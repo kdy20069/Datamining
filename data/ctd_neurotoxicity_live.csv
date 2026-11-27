@@ -1,0 +1,5 @@
+record_type,query,source_url,retrieval_date,status,gene_symbol,gene_id,chemical_id,payload_excerpt,failure_reason
+interaction,Permethrin (D026023) chemical-gene interactions for CYP3A4/GeneID 1576 and CYP2C19/GeneID 1557,https://ctdbase.org/detail.go?type=chem&acc=D026023&view=ixn,2026-11-27,failed,,,D026023,,HTTPError: HTTP Error 302: Moved Temporarily
+disease_gene,Neurotoxicity Syndromes (MESH:D020258) associated genes,https://ctdbase.org/detail.go?type=disease&acc=MESH%3AD020258&view=gene,2026-11-27,failed,,,,,HTTPError: HTTP Error 302: Moved Temporarily
+download_audit,CTD chemical-gene interaction report; filter chemical D026023 and genes 1576/1557,https://ctdbase.org/reports/CTD_chem_gene_ixns.tsv.gz,2026-11-27,failed,,,,matching rows=0; report header found=False,CTD report could not be parsed as the expected structured report; matching gene rows not established
+download_audit,CTD gene-disease report; filter disease MESH:D020258,https://ctdbase.org/reports/CTD_genes_diseases.tsv.gz,2026-11-27,failed,,,,,OverflowError: signed integer is greater than maximum
