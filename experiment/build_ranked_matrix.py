@@ -137,7 +137,7 @@ def main():
     for r in ranked:
         count=r["observed_shared_count"];competition_rank=1+sum(1 for x in ranked if x["observed_shared_count"]>count)
         tied=sum(1 for x in ranked if x["observed_shared_count"]==count)-1
-        r["observed_rank"]=f"Joint Rank {competition_rank} / Tied {tied}"
+        r["observed_rank"]=f"{competition_rank} (tie)" if tied else str(competition_rank)
     out=os.path.join(HERE,"pair_matrix_2x3.csv")
     fields=["rank","observed_rank","tie_break_order","pesticide","benzodiazepine","shared_nodes","observed_shared_nodes","observed_shared_count","inferred_shared_nodes","inferred_shared_count","pmid_supported_shared_nodes","bioassay_supported_shared_nodes","core_mechanism_summary","rank_basis"]
     write(out,ranked,fields)

@@ -50,18 +50,19 @@ def fig1():
     expanded=read(os.path.join(DATA,"expanded_db_evidence.csv"))
     evid=read(os.path.join(HERE,"evidence_table.csv"))
     # Positions are fixed for legibility; all nodes and edges are sourced from these tables.
-    chemicals={"Permethrin":(1.7,8.65),"Prallethrin":(1.7,7.35),"PBO":(1.7,6.05),"Diazepam":(1.7,4.0),"Alprazolam":(1.7,2.45)}
-    enzymes={"CYP3A4":(4.7,8.1),"CYP2C19":(4.7,6.65),"POR":(7.5,8.3)}
+    chemicals={"Permethrin":(1.8,8.25),"Prallethrin":(1.8,7.15),"PBO":(1.8,6.05),"Diazepam":(1.8,4.95),"Alprazolam":(1.8,3.85)}
+    enzymes={"CYP3A4":(5.8,8.0),"CYP2C19":(5.8,6.65),"POR":(5.8,5.3)}
     subunits=["GABRA1","GABRA2","GABRA3","GABRA5","GABRB2","GABRG2"]
-    sub_pos={g:(7.35,6.45-i*.76) for i,g in enumerate(subunits)}
-    gaba_hub=(4.8,3.9)
-    events={"KE64":(9.95,5.7),"KE669":(12.95,5.7),"KE682":(15.95,5.7),"KE616":(18.95,5.7),"AO613":(21.95,5.7)}
+    sub_pos={g:(12.7,7.45-i*.68) for i,g in enumerate(subunits)}
+    gaba_hub=(8.7,4.45)
+    events={"KE64":(2.1,1.95),"KE669":(5.9,1.95),"KE682":(9.7,1.95),"KE616":(13.5,1.95),"AO613":(17.3,1.95)}
 
-    fig,ax=plt.subplots(figsize=(18/2.54,16/2.54),constrained_layout=False)
-    fig.subplots_adjust(left=.025,right=.99,top=.89,bottom=.09)
-    ax.set_xlim(-.1,23.5); ax.set_ylim(.5,9.55); ax.axis("off")
-    for x,label in [(1.7,"Candidate\ncompounds"),(4.7,"Metabolic\nenzymes"),(7.35,"GABA-A\nsubunits"),(15.95,"AOP 10\nevents")]:
-        ax.text(x,9.18,label,ha="center",va="bottom",fontsize=9,color="#455769",fontweight="bold",linespacing=.95)
+    # Draw for the report's 18 cm print width: at this canvas size 9 pt remains 9 pt on paper.
+    fig,ax=plt.subplots(figsize=(7.2,4.0),constrained_layout=False)
+    fig.subplots_adjust(left=.025,right=.985,top=.93,bottom=.075)
+    ax.set_xlim(-.2,19.5); ax.set_ylim(.2,10.1); ax.axis("off")
+    for x,y,label in [(1.8,9.18,"Compounds"),(5.8,9.18,"CYP enzymes"),(12.7,9.18,"GABA-A subunits")]:
+        ax.text(x,y,label,ha="center",va="bottom",fontsize=9,color="#455769",fontweight="bold",linespacing=.95)
 
     # Direct pesticide-to-enzyme observations, taken from CTD and PubChem/ChEMBL rows.
     pest_edges={"Permethrin":{"CYP3A4":"CTD PMID 24548679","CYP2C19":"CTD PMID 24548679"},"Prallethrin":{},"PBO":{}}
@@ -75,7 +76,7 @@ def fig1():
         if r.get("candidate_compound")=="PBO" and r.get("source_db")=="ChEMBL archived activity observed" and r.get("target_gene") in enzymes:
             pest_edges["PBO"][r["target_gene"]]="ChEMBL archived assay"
     for chem in ["Permethrin","Prallethrin","PBO"]:
-        node(ax,chemicals[chem],chem,"#F4C6A5",width=2.9,height=.62,fontsize=10,weight="bold")
+        node(ax,chemicals[chem],chem,"#F4C6A5",width=2.9,height=.62,fontsize=9.5,weight="bold")
         for gene,label in pest_edges[chem].items():
             arrow(ax,chemicals[chem],enzymes[gene],"observed",color="#B95B36",rad=.04 if gene=="CYP3A4" else -.04)
 
@@ -90,23 +91,23 @@ def fig1():
                 for g in subunits:
                     if re.search(rf"\b{ {'GABRA1':'2554','GABRA2':'2555','GABRA3':'2556','GABRA5':'2558','GABRB2':'2561','GABRG2':'2566'}[g] }\b",note):benz_edges[chem].add(g)
     for chem in ("Diazepam","Alprazolam"):
-        node(ax,chemicals[chem],chem,"#B8D8D0",width=2.9,height=.62,fontsize=10,weight="bold")
+        node(ax,chemicals[chem],chem,"#B8D8D0",width=2.9,height=.62,fontsize=9.5,weight="bold")
         for gene in benz_edges[chem]:
             if gene in enzymes:
                 arrow(ax,chemicals[chem],enzymes[gene],"observed",color="#287C70",rad=.035 if gene=="CYP3A4" else -.035,lw=1.45)
     # Draw target nodes after arrows.
-    node(ax,enzymes["CYP3A4"],"CYP3A4","#DCE6F2",width=2.7,height=.62,fontsize=10,weight="bold")
-    node(ax,enzymes["CYP2C19"],"CYP2C19","#DCE6F2",width=2.7,height=.62,fontsize=10,weight="bold")
-    node(ax,enzymes["POR"],"POR\n(network\nneighbor)","#E9E4F4",width=2.5,height=.95,fontsize=9.2,weight="bold")
+    node(ax,enzymes["CYP3A4"],"CYP3A4","#DCE6F2",width=2.7,height=.62,fontsize=9,weight="bold")
+    node(ax,enzymes["CYP2C19"],"CYP2C19","#DCE6F2",width=2.7,height=.62,fontsize=9,weight="bold")
+    node(ax,enzymes["POR"],"POR\n(network\nneighbor)","#E9E4F4",width=2.5,height=.95,fontsize=8.5,weight="bold")
     target_count=len(set().union(*(benz_edges[c] for c in ("Diazepam","Alprazolam"))) & set(subunits))
-    node(ax,gaba_hub,f"KEGG GABR\ntarget set\n({target_count} subunits)","#B8D8D0",width=2.8,height=1.0,fontsize=9.2,weight="bold")
+    node(ax,gaba_hub,f"KEGG GABR\ntarget set\n({target_count} subunits)","#B8D8D0",width=2.8,height=1.0,fontsize=8.5,weight="bold")
     for chem in ("Diazepam","Alprazolam"):
         if benz_edges[chem].intersection(subunits):
             arrow(ax,chemicals[chem],gaba_hub,"observed",color="#287C70",rad=.04 if chem=="Diazepam" else -.04,lw=1.6)
     for g in subunits:
         if g in benz_edges["Diazepam"] or g in benz_edges["Alprazolam"]:
             arrow(ax,gaba_hub,sub_pos[g],"observed",color="#287C70",lw=1.05,rad=(subunits.index(g)-2.5)*.025)
-    for g,pos in sub_pos.items():node(ax,pos,g,"#D7EBDD",width=1.9,height=.52,fontsize=10,weight="bold")
+    for g,pos in sub_pos.items():node(ax,pos,g,"#D7EBDD",width=1.9,height=.52,fontsize=9,weight="bold")
 
     # Explicit evidence-table relations and marked inferential bridges.
     stringrow=next((r for r in evid if r.get("source_db","").startswith("STRING") and "CYP3A4-POR" in r.get("record_id","")),None)
@@ -124,16 +125,16 @@ def fig1():
     ao613=next((r.get("target_node","") for r in evid if r.get("record_id")=="KER 630"),"AO 613")
     # Compact labels retain each event's source meaning while fitting at 9 pt;
     # full event wording remains in evidence_table.csv.
-    event_labels={"KE64":"KE 64:\nReduction\nionotropic\nGABA\nreceptor\nchloride\nchannel\nconductance",
-                  "KE669":"KE 669:\nReduction\nneuronal\nsynaptic\ninhibition",
-                  "KE682":"KE 682:\nGeneration\namplified\nEPSP",
-                  "KE616":"KE 616:\nOccurrence\nparoxysmal\ndepolarizing\nshift",
-                  "AO613":"AO 613:\nOccurrence\nepileptic\nseizure"}
-    event_widths={"KE64":2.95,"KE669":2.5,"KE682":2.5,"KE616":2.8,"AO613":2.5}
+    event_labels={"KE64":"KE 64:\nReduced\nionotropic GABA\nreceptor Cl-\nconductance",
+                  "KE669":"KE 669:\nReduced\nneuronal\nsynaptic\ninhibition",
+                  "KE682":"KE 682:\nGeneration of\namplified EPSP",
+                  "KE616":"KE 616:\nParoxysmal\ndepolarizing shift",
+                  "AO613":"AO 613:\nEpileptic\nseizure"}
+    event_widths={"KE64":3.35,"KE669":2.5,"KE682":2.5,"KE616":2.8,"AO613":2.5}
     for key,pos in events.items():
         label=event_labels[key]
         color="#F2D99B" if key.startswith("KE") else "#E8B8B8"
-        node(ax,pos,label,color,width=event_widths[key],height=2.6,fontsize=9.0,weight="bold")
+        node(ax,pos,label,color,width=event_widths[key],height=2.15,fontsize=8.5,weight="bold")
     # GABA receptor and CYP3A4 to KE64 are explicitly dashed synthesis hypotheses.
     arrow(ax,gaba_hub,events["KE64"],"inferred",color="#558459",lw=1.8,rad=-.04)
     arrow(ax,enzymes["CYP3A4"],events["KE64"],"inferred",color="#64549B",lw=1.6,rad=-.13)
@@ -144,47 +145,60 @@ def fig1():
     arrow(ax,events["KE669"],events["KE682"],"inferred",color="#9A6B45",arrowstyle="-|>")
     arrow(ax,events["KE682"],events["KE616"],"observed",color="#8F6C13")
     arrow(ax,events["KE616"],events["AO613"],"observed",color="#8F6C13")
-    ax.text(15.95,3.55,"Dashed KE669→KE682 continuity is not present\nin supplied KER rows.",ha="center",va="center",fontsize=9,color="#785C43")
-    ax.text(.15,.72,"GABR → KE64 is a pathway hypothesis; KE64 is not a direct effect measurement for these compounds.",ha="left",va="center",fontsize=9,color="#455769")
+    ax.text(13.9,3.48,"Dashed KE 669 -> KE 682 is absent from supplied KER rows.",ha="center",va="center",fontsize=8.5,color="#785C43")
+    ax.text(.15,.25,"GABR → KE64 is a pathway hypothesis; KE64 is not a direct effect measurement for these compounds.",ha="left",va="center",fontsize=8.5,color="#455769")
     leg=[Line2D([0],[0],color="#526579",lw=2,label="Observed record / KER (solid)"),Line2D([0],[0],color="#526579",lw=2,ls="--",label="Inferred or unverified bridge (dashed)")]
-    ax.legend(handles=leg,loc="upper right",frameon=False,fontsize=9,ncol=1,bbox_to_anchor=(1,.91))
-    fig.suptitle("Integrated pesticide–benzodiazepine evidence network",fontsize=13,fontweight="bold",y=.975)
-    fig.savefig(os.path.join(OUT,"fig1_integrated_network.png"),dpi=300)
+    ax.legend(handles=leg,loc="upper center",frameon=False,fontsize=8.5,ncol=1,bbox_to_anchor=(.70,.92))
+    fig.suptitle("Integrated insecticide–benzodiazepine evidence network",fontsize=9.5,fontweight="bold",y=.99)
+    fig.savefig(os.path.join(OUT,"fig1_integrated_network.png"),dpi=300,bbox_inches="tight",pad_inches=0.06)
     plt.close(fig)
 
 def fig2():
-    rows=read(os.path.join(DATA,"psychiatric_disease_evidence.csv"))
-    genes=["GABRA1","GABRA2","GABRA3","GABRA5","GABRB2","GABRG2"]
-    diseases=["major depressive disorder","schizophrenia","anxiety disorder"]
-    vals=np.full((len(genes),len(diseases)),np.nan)
-    for r in rows:
-        if r.get("source_db")!="Open Targets GraphQL" or r.get("status_or_failure_reason") not in {"observed_in_first_500_associated_targets","observed_with_score_components"}:continue
-        g=r.get("gene_symbol"); d=r.get("disease","").lower(); s=score_from_summary(r.get("evidence_summary",""))
-        if g in genes and d in diseases and s is not None: vals[genes.index(g),diseases.index(d)]=s
-    fig,ax=plt.subplots(figsize=(14,9))
-    masked=np.ma.masked_invalid(vals)
-    im=ax.imshow(masked,cmap="YlGnBu",vmin=0,vmax=1,aspect="auto")
-    ax.set_xticks(range(3),["MDD","Schizophrenia","Anxiety disorder"]);ax.set_yticks(range(6),genes)
-    ax.tick_params(labelsize=12);ax.set_title("Open Targets overall association scores",loc="left",fontsize=18,fontweight="bold",pad=26)
-    ax.set_xlabel("Disease (MONDO IDs and exact query are in psychiatric_disease_evidence.csv)",labelpad=12)
-    for i,g in enumerate(genes):
-        for j,d in enumerate(diseases):
-            v=vals[i,j]
-            txt=f"{v:.3f}" if np.isfinite(v) else "N/R"
-            color="white" if np.isfinite(v) and v>.48 else "#172B3A"
-            ax.text(j,i,txt,ha="center",va="center",fontsize=12,fontweight="bold",color=color)
-    ax.set_xticks(np.arange(-.5,3,1),minor=True);ax.set_yticks(np.arange(-.5,6,1),minor=True);ax.grid(which="minor",color="white",lw=2);ax.tick_params(which="minor",bottom=False,left=False)
-    cb=fig.colorbar(im,ax=ax,fraction=.035,pad=.04);cb.set_label("Overall association score",fontsize=12);cb.ax.tick_params(labelsize=10)
     direct=read(os.path.join(DATA,"psychiatric_cyp_check.csv"))
-    def direct_score(gene,disease):
-        row=next((r for r in direct if r.get("gene_symbol")==gene and r.get("disease_id")==disease),None)
-        try:return f"{float(row['overall_score']):.3f}" if row else "not returned"
-        except (ValueError,TypeError):return "not returned"
-    fig.text(.5,.045,"Clinical-precedence component ≈0.995–0.997 drives the similar GABA-A scores; literature component varies. "
-             f"Direct CYP3A4/CYP2C19/POR MDD scores: {direct_score('CYP3A4','MONDO_0002009')}/{direct_score('CYP2C19','MONDO_0002009')}/{direct_score('POR','MONDO_0002009')}; CYP3A4 neurotoxicity={direct_score('CYP3A4','EFO_0011057')}. "
-             "CTD live query failed; local extract intersection = 0/9.",ha="center",va="center",fontsize=9.5,color="#3C4B58",wrap=True)
-    fig.tight_layout(rect=(0,.09,1,.91))
-    fig.savefig(os.path.join(OUT,"fig2_neuro_psych_overlap.png"),dpi=300,bbox_inches="tight",pad_inches=0.25)
+    genes=["CYP3A4","CYP2C19","POR"]
+    diseases=[("MONDO_0002009","MDD"),("MONDO_0005090","Schizophrenia"),("MONDO_0005618","Anxiety disorder"),("MONDO_0005027","Epilepsy"),("EFO_0011057","Neurotoxicity"),("HP_0002384","Focal impaired\nawareness seizure")]
+    # Use the exact returned disease IDs/names in the input; focal seizure is reported
+    # separately when an explicitly seizure-named record is present.
+    vals=np.full((len(genes),len(diseases)),np.nan)
+    for i,g in enumerate(genes):
+        for j,(did,label) in enumerate(diseases):
+            matches=[r for r in direct if r.get("gene_symbol")==g and r.get("disease_id")==did and ("seizure" in r.get("disease_name","").lower() if label=="Focal seizure" else True)]
+            if matches:
+                try: vals[i,j]=float(matches[0]["overall_score"])
+                except (ValueError,KeyError): pass
+    gaba_genes={"GABRA1","GABRA2","GABRA3","GABRA5","GABRB2","GABRG2"}
+    gaba_rows=[r for r in read(os.path.join(DATA,"psychiatric_disease_evidence.csv")) if r.get("gene_symbol") in gaba_genes]
+    def mean_score(disease_id):
+        scores=[]
+        for row in gaba_rows:
+            summary=row.get("evidence_summary","")
+            if f"disease ID={disease_id}" not in summary: continue
+            match=re.search(r"overall association score=([0-9.eE+-]+)",summary)
+            if match:scores.append(float(match.group(1)))
+        return float(np.mean(scores)) if scores else np.nan
+    gaba_means=[mean_score("MONDO_0002009"),mean_score("MONDO_0005090"),mean_score("MONDO_0005618")]
+    fig=plt.figure(figsize=(7.2,3.55))
+    gs=fig.add_gridspec(2,1,height_ratios=[3.0,.8],hspace=.42)
+    ax=fig.add_subplot(gs[0])
+    im=ax.imshow(np.ma.masked_invalid(vals),cmap="YlGnBu",vmin=0,vmax=.12,aspect="auto")
+    ax.set_xticks(range(len(diseases)),[d[1] for d in diseases]); ax.set_yticks(range(3),genes)
+    wrapped_labels=["MDD","Schizo-\nphrenia","Anxiety\ndisorder","Epilepsy","Neurotoxicity","Focal impaired\nawareness\nseizure"]
+    ax.set_xticks(range(len(diseases)),wrapped_labels)
+    ax.tick_params(axis="x",labelsize=8.5); ax.tick_params(axis="y",labelsize=9)
+    ax.set_title("Direct Open Targets associations for ranked metabolic enzymes",loc="left",fontsize=9.5,fontweight="bold",pad=6)
+    for i in range(3):
+        for j in range(len(diseases)):
+            v=vals[i,j]; ax.text(j,i,f"{v:.5f}" if np.isfinite(v) else "N/R",ha="center",va="center",fontsize=8.5,fontweight="bold",color="white" if np.isfinite(v) and v>.055 else "#172B3A")
+    ax.set_xticks(np.arange(-.5,len(diseases),1),minor=True); ax.set_yticks(np.arange(-.5,3,1),minor=True)
+    ax.grid(which="minor",color="white",lw=2); ax.tick_params(which="minor",bottom=False,left=False)
+    cb=fig.colorbar(im,ax=ax,fraction=.025,pad=.025); cb.set_label("Overall association score",fontsize=8.5); cb.ax.tick_params(labelsize=8.5)
+    rowax=fig.add_subplot(gs[1]); rowax.set_xlim(-.5,5.5); rowax.set_ylim(-.5,.5); rowax.axis("off")
+    rowax.text(-.58,0,"GABA-A\n(6-gene mean)",ha="right",va="center",fontsize=8.5,fontweight="bold",color="#33495C",clip_on=False)
+    for j,v in enumerate(gaba_means+[np.nan,np.nan,np.nan]):
+        face="#E8EDF1" if j<3 else "#F5F6F7"
+        rowax.add_patch(plt.Rectangle((j-.5,-.42),1,.84,facecolor=face,edgecolor="white",lw=1.5))
+        rowax.text(j,0,f"{v:.5f}" if np.isfinite(v) else "—",ha="center",va="center",fontsize=8.5,fontweight="bold",color="#263746")
+    fig.savefig(os.path.join(OUT,"fig2_neuro_psych_overlap.png"),dpi=300,bbox_inches="tight",pad_inches=.12)
     plt.close(fig)
 
 def fig3():

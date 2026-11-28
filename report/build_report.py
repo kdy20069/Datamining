@@ -26,11 +26,17 @@ from reportlab.platypus import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
+# Correct working-directory-dependent root: the report lives at project/report/,
+# so the project root is one level up from report/, not two.
+if ROOT.name != "Datamining":
+    ROOT = ROOT.parent
 SOURCE = ROOT / "report" / "Final_Report.md"
 PDF_OUT = ROOT / "report" / "Final_Report.pdf"
 DOCX_OUT = ROOT / "report" / "Final_Report.docx"
 IMAGE_RE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+FIGURE_CAPTION_RE = re.compile(r"\*\*Figure\s+(\d+)\.\*\*\s*(.*)")
+ALT_FIGURE_RE = re.compile(r"Figure\s+(\d+)\.\s*(.*)")
 
 
 def parse_blocks(text: str):
@@ -54,10 +60,22 @@ def parse_blocks(text: str):
         image = IMAGE_RE.fullmatch(line)
         if image:
             i += 1
+            while i < len(lines) and not lines[i].strip():
+                i += 1
             caption = ""
-            if i < len(lines) and re.match(r"\s*\*\*Figure\s+\d+\.", lines[i]):
+            if i < len(lines):
+                caption_match = FIGURE_CAPTION_RE.fullmatch(lines[i].strip())
+            else:
+                caption_match = None
+            if caption_match:
                 caption = lines[i].strip()
                 i += 1
+            else:
+                # Older report drafts stored the full Figure N caption in image alt text.
+                # Alt text is not painted by PDFImage, so promote that text to a caption.
+                alt_match = ALT_FIGURE_RE.fullmatch(image.group(1).strip())
+                if alt_match:
+                    caption = f"**Figure {alt_match.group(1)}.** {alt_match.group(2)}".strip()
             yield "figure", (image.group(1), image.group(2), caption)
             continue
         if line.startswith("#"):
@@ -92,7 +110,7 @@ def parse_blocks(text: str):
 def split_inline(text: str):
     """Return text/format tuples for the report's bold, code, and link syntax."""
     # Match code before single-star emphasis so allele names such as CYP2C19*2 stay intact.
-    token = re.compile(r"(\*\*.*?\*\*|`[^`]+`|(?<!\*)\*(?!\*).*?(?<!\*)\*(?!\*)|\[[^\]]+\]\([^)]+\))")
+    token = re.compile(r"(\*\*.*?\*\*|`[^`]+`|(?<![\w*])\*(?!\*).*?(?<!\*)\*(?![\w*])|\[[^\]]+\]\([^)]+\))")
     chunks = []
     pos = 0
     for m in token.finditer(text):
@@ -107,7 +125,8 @@ def split_inline(text: str):
             chunks.append((value[1:-1], "italic"))
         else:
             lm = LINK_RE.fullmatch(value)
-            chunks.append((f"{lm.group(1)} ({lm.group(2)})", "normal"))
+            label, url = lm.groups()
+            chunks.append((url if label == url else f"{label} ({url})", "normal"))
         pos = m.end()
     if pos < len(text):
         chunks.append((text[pos:], "normal"))
@@ -115,7 +134,9 @@ def split_inline(text: str):
 
 
 def pdf_markup(text: str) -> str:
-    text = text.replace("→", "->").replace("—", "-")
+    # Keep dash separators visibly apart from adjacent URLs in the rendered PDF.
+    text = text.replace("µ", "u").replace("→", "->")
+    text = re.sub(r"\s*[—–]\s*", " - ", text)
     pieces = []
     for value, style in split_inline(text):
         value = html.escape(value)
@@ -130,9 +151,11 @@ def pdf_markup(text: str) -> str:
 
 
 def image_path(raw: str) -> Path:
-    path = (SOURCE.parent / raw).resolve()
-    if not path.is_file() or not path.is_relative_to(ROOT):
-        raise FileNotFoundError(f"Report image is missing or outside repository: {raw}")
+    # Images are referenced as `experiment/fig1_...`; SOURCE lives at
+    # project/report/Final_Report.md, so the project root is SOURCE.parent.parent.
+    path = (SOURCE.parent.parent / raw).resolve()
+    if not path.is_file():
+        raise FileNotFoundError(f"Report image is missing: {raw}")
     return path
 
 
@@ -141,11 +164,50 @@ def make_pdf(blocks):
     styles.add(ParagraphStyle(name="ReportTitle", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=16, leading=19, textColor=colors.HexColor("#18324b"), alignment=TA_LEFT, spaceAfter=5))
     styles.add(ParagraphStyle(name="ReportH2", parent=styles["Heading2"], fontName="Helvetica-Bold", fontSize=11.2, leading=13, textColor=colors.HexColor("#18324b"), spaceBefore=7, spaceAfter=3, keepWithNext=True))
     styles.add(ParagraphStyle(name="ReportH3", parent=styles["Heading3"], fontName="Helvetica-Bold", fontSize=9.4, leading=11, textColor=colors.HexColor("#264b68"), spaceBefore=5, spaceAfter=2, keepWithNext=True))
-    styles.add(ParagraphStyle(name="ReportBody", parent=styles["BodyText"], fontName="Helvetica", fontSize=7.8, leading=9.15, spaceAfter=2.5, alignment=TA_LEFT, splitLongWords=True))
+    styles.add(ParagraphStyle(name="ReportBody", parent=styles["BodyText"], fontName="Helvetica", fontSize=7.4, leading=8.5, spaceAfter=2.0, alignment=TA_LEFT, splitLongWords=True))
+    styles.add(ParagraphStyle(name="ReportReference", parent=styles["BodyText"], fontName="Helvetica", fontSize=6.2, leading=6.4, spaceAfter=0.5, alignment=TA_LEFT, splitLongWords=True))
     styles.add(ParagraphStyle(name="ReportSmall", parent=styles["BodyText"], fontName="Helvetica", fontSize=6.7, leading=7.6, spaceAfter=0))
     styles.add(ParagraphStyle(name="ReportCaption", parent=styles["BodyText"], fontName="Helvetica", fontSize=7.0, leading=8, alignment=TA_CENTER, spaceBefore=1, spaceAfter=2))
     story = []
-    for kind, payload in blocks:
+    def heading_flowable(payload):
+        level, heading_text = payload
+        return Paragraph(pdf_markup(heading_text), styles["ReportTitle"] if level == 1 else styles["ReportH2" if level == 2 else "ReportH3"])
+
+    index = 0
+    in_references = False
+    references_seen = False
+    while index < len(blocks):
+        kind, payload = blocks[index]
+        if kind == "heading" and payload[0] == 2 and payload[1].strip().lower() == "references":
+            if references_seen:
+                index += 1
+                continue
+            references_seen = True
+            in_references = True
+        if kind == "heading" and payload[0] == 2 and index + 1 < len(blocks):
+            next_kind, next_payload = blocks[index + 1]
+            if next_kind == "figure" or (next_kind == "table" and len(next_payload) <= 8):
+                group = [heading_flowable(payload)]
+                if next_kind == "figure":
+                    _alt, raw, caption = next_payload
+                    img_path = image_path(raw)
+                    if not img_path.is_file():
+                        raise FileNotFoundError(f"Report image is missing: {raw}")
+                    max_w, max_h = A4[0] - 30 * mm, 72 * mm
+                    img = PDFImage(str(img_path), width=max_w, height=max_h, kind="proportional")
+                    img._restrictSize(max_w, max_h)
+                    cap = Paragraph(pdf_markup(caption), styles["ReportCaption"]) if caption else Spacer(1, 1)
+                    group.append(KeepTogether([img, cap]))
+                else:
+                    rows = next_payload
+                    data = [[Paragraph(pdf_markup(cell), styles["ReportSmall"]) for cell in row] for row in rows]
+                    usable = A4[0] - 30 * mm
+                    table = PDFTable(data, colWidths=[usable / max(map(len, rows))] * max(map(len, rows)), repeatRows=1, hAlign="LEFT")
+                    table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e8eef3")), ("GRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#b9c5cf")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 3), ("RIGHTPADDING", (0, 0), (-1, -1), 3), ("TOPPADDING", (0, 0), (-1, -1), 2.5), ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5)]))
+                    group.append(table)
+                story.append(KeepTogether(group))
+                index += 2
+                continue
         if kind == "heading":
             level, text = payload
             if level == 1:
@@ -153,13 +215,13 @@ def make_pdf(blocks):
             else:
                 story.append(Paragraph(pdf_markup(text), styles["ReportH2" if level == 2 else "ReportH3"]))
         elif kind == "paragraph":
-            story.append(Paragraph(pdf_markup(payload), styles["ReportBody"]))
+            story.append(Paragraph(pdf_markup(payload), styles["ReportReference" if in_references else "ReportBody"]))
         elif kind in ("bullet", "number"):
             if kind == "bullet":
-                story.append(Paragraph(f"• {pdf_markup(payload)}", styles["ReportBody"]))
+                story.append(Paragraph(f"• {pdf_markup(payload)}", styles["ReportReference" if in_references else "ReportBody"]))
             else:
                 number, content = payload
-                story.append(Paragraph(f"{number}. {pdf_markup(content)}", styles["ReportBody"]))
+                story.append(Paragraph(f"{number}. {pdf_markup(content)}", styles["ReportReference" if in_references else "ReportBody"]))
         elif kind == "table":
             data = [[Paragraph(pdf_markup(cell), styles["ReportSmall"]) for cell in row] for row in payload]
             usable = A4[0] - 2 * 15 * mm
@@ -179,11 +241,12 @@ def make_pdf(blocks):
         elif kind == "figure":
             alt, raw, caption = payload
             p = image_path(raw)
-            max_w, max_h = A4[0] - 30 * mm, 92 * mm
+            max_w, max_h = A4[0] - 30 * mm, 72 * mm
             img = PDFImage(str(p), width=max_w, height=max_h, kind="proportional")
             img._restrictSize(max_w, max_h)
             caption_p = Paragraph(pdf_markup(caption), styles["ReportCaption"]) if caption else Spacer(1, 1)
             story.append(KeepTogether([img, caption_p]))
+        index += 1
     doc = SimpleDocTemplate(str(PDF_OUT), pagesize=A4, rightMargin=11*mm, leftMargin=11*mm, topMargin=10*mm, bottomMargin=10*mm, title="Evidence-Bounded Integrated Audit", author="")
     doc.build(story)
 
